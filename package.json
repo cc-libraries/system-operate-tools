@@ -1,0 +1,26 @@
+{
+    "name": "system-operate-tools",
+    "version": "0.0.1",
+    "description": "a serious tools for you to operate your system",
+    "scripts": {
+        "build": "tsc",
+        "watch": "tsc -w",
+        "lint": "tslint -c tslint.json -p tsconfig.json",
+        "start": "npm run build && electron ./dist/main.js"
+    },
+    "repository": "https://github.com/hello-chenchen/system-operate-tools.git",
+    "keywords": [
+        "productivity"
+    ],
+    "author": "hello_chenchen",
+    "dependencies": {
+        "electron": "^2.0.2",
+        "tslint": "^5.10.0",
+        "typescript": "^2.8.3"
+    },
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/hello-chenchen/system-operate-tools/issues"
+    },
+    "homepage": "https://github.com/hello-chenchen/system-operate-tools#readme"
+}
