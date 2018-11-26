@@ -15,7 +15,12 @@
     "author": "hello_chenchen",
     "dependencies": {},
     "devDependencies": {
+        "antd": "^3.10.9",
+        "babel-plugin-import": "^1.11.0",
         "electron": "^2.0.2",
+        "react": "^16.6.3",
+        "react-dom": "^16.6.3",
+        "react-scripts-ts": "^3.1.0",
         "tslint": "^5.10.0",
         "typescript": "^2.8.3"
     },

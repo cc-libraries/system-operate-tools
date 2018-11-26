@@ -1,0 +1,383 @@
+
+> system-operate-tools@0.0.1 start /Users/maiken/Code/system-operate-tools
+> npm run build && electron ./dist/main.js
+
+
+> system-operate-tools@0.0.1 build /Users/maiken/Code/system-operate-tools
+> tsc
+
+node_modules/antd/lib/affix/index.d.ts(1,24): error TS7016: Could not find a declaration file for module 'react'. '/Users/maiken/Code/system-operate-tools/node_modules/react/index.js' implicitly has an 'any' type.
+  Try `npm install @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react';`
+node_modules/antd/lib/affix/index.d.ts(2,28): error TS7016: Could not find a declaration file for module 'prop-types'. '/Users/maiken/Code/system-operate-tools/node_modules/prop-types/index.js' implicitly has an 'any' type.
+  Try `npm install @types/prop-types` if it exists or add a new declaration (.d.ts) file containing `declare module 'prop-types';`
+node_modules/antd/lib/affix/index.d.ts(45,15): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/alert/index.d.ts(1,24): error TS7016: Could not find a declaration file for module 'react'. '/Users/maiken/Code/system-operate-tools/node_modules/react/index.js' implicitly has an 'any' type.
+  Try `npm install @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react';`
+node_modules/antd/lib/alert/index.d.ts(36,15): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/anchor/Anchor.d.ts(1,24): error TS7016: Could not find a declaration file for module 'react'. '/Users/maiken/Code/system-operate-tools/node_modules/react/index.js' implicitly has an 'any' type.
+  Try `npm install @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react';`
+node_modules/antd/lib/anchor/Anchor.d.ts(2,28): error TS7016: Could not find a declaration file for module 'prop-types'. '/Users/maiken/Code/system-operate-tools/node_modules/prop-types/index.js' implicitly has an 'any' type.
+  Try `npm install @types/prop-types` if it exists or add a new declaration (.d.ts) file containing `declare module 'prop-types';`
+node_modules/antd/lib/anchor/Anchor.d.ts(69,15): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/anchor/AnchorLink.d.ts(1,24): error TS7016: Could not find a declaration file for module 'react'. '/Users/maiken/Code/system-operate-tools/node_modules/react/index.js' implicitly has an 'any' type.
+  Try `npm install @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react';`
+node_modules/antd/lib/anchor/AnchorLink.d.ts(2,28): error TS7016: Could not find a declaration file for module 'prop-types'. '/Users/maiken/Code/system-operate-tools/node_modules/prop-types/index.js' implicitly has an 'any' type.
+  Try `npm install @types/prop-types` if it exists or add a new declaration (.d.ts) file containing `declare module 'prop-types';`
+node_modules/antd/lib/anchor/AnchorLink.d.ts(25,15): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/auto-complete/index.d.ts(1,24): error TS7016: Could not find a declaration file for module 'react'. '/Users/maiken/Code/system-operate-tools/node_modules/react/index.js' implicitly has an 'any' type.
+  Try `npm install @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react';`
+node_modules/antd/lib/auto-complete/index.d.ts(38,28): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/auto-complete/index.d.ts(42,15): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/avatar/index.d.ts(1,24): error TS7016: Could not find a declaration file for module 'react'. '/Users/maiken/Code/system-operate-tools/node_modules/react/index.js' implicitly has an 'any' type.
+  Try `npm install @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react';`
+node_modules/antd/lib/avatar/index.d.ts(36,15): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/back-top/index.d.ts(1,24): error TS7016: Could not find a declaration file for module 'react'. '/Users/maiken/Code/system-operate-tools/node_modules/react/index.js' implicitly has an 'any' type.
+  Try `npm install @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react';`
+node_modules/antd/lib/back-top/index.d.ts(22,15): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/badge/index.d.ts(1,24): error TS7016: Could not find a declaration file for module 'react'. '/Users/maiken/Code/system-operate-tools/node_modules/react/index.js' implicitly has an 'any' type.
+  Try `npm install @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react';`
+node_modules/antd/lib/badge/index.d.ts(2,28): error TS7016: Could not find a declaration file for module 'prop-types'. '/Users/maiken/Code/system-operate-tools/node_modules/prop-types/index.js' implicitly has an 'any' type.
+  Try `npm install @types/prop-types` if it exists or add a new declaration (.d.ts) file containing `declare module 'prop-types';`
+node_modules/antd/lib/badge/index.d.ts(36,15): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/badge/ScrollNumber.d.ts(1,24): error TS7016: Could not find a declaration file for module 'react'. '/Users/maiken/Code/system-operate-tools/node_modules/react/index.js' implicitly has an 'any' type.
+  Try `npm install @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react';`
+node_modules/antd/lib/badge/ScrollNumber.d.ts(2,27): error TS7016: Could not find a declaration file for module 'react'. '/Users/maiken/Code/system-operate-tools/node_modules/react/index.js' implicitly has an 'any' type.
+  Try `npm install @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react';`
+node_modules/antd/lib/breadcrumb/Breadcrumb.d.ts(1,24): error TS7016: Could not find a declaration file for module 'react'. '/Users/maiken/Code/system-operate-tools/node_modules/react/index.js' implicitly has an 'any' type.
+  Try `npm install @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react';`
+node_modules/antd/lib/breadcrumb/Breadcrumb.d.ts(2,28): error TS7016: Could not find a declaration file for module 'prop-types'. '/Users/maiken/Code/system-operate-tools/node_modules/prop-types/index.js' implicitly has an 'any' type.
+  Try `npm install @types/prop-types` if it exists or add a new declaration (.d.ts) file containing `declare module 'prop-types';`
+node_modules/antd/lib/breadcrumb/Breadcrumb.d.ts(32,15): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/breadcrumb/BreadcrumbItem.d.ts(1,24): error TS7016: Could not find a declaration file for module 'react'. '/Users/maiken/Code/system-operate-tools/node_modules/react/index.js' implicitly has an 'any' type.
+  Try `npm install @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react';`
+node_modules/antd/lib/breadcrumb/BreadcrumbItem.d.ts(2,28): error TS7016: Could not find a declaration file for module 'prop-types'. '/Users/maiken/Code/system-operate-tools/node_modules/prop-types/index.js' implicitly has an 'any' type.
+  Try `npm install @types/prop-types` if it exists or add a new declaration (.d.ts) file containing `declare module 'prop-types';`
+node_modules/antd/lib/breadcrumb/BreadcrumbItem.d.ts(19,15): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/button/button-group.d.ts(1,24): error TS7016: Could not find a declaration file for module 'react'. '/Users/maiken/Code/system-operate-tools/node_modules/react/index.js' implicitly has an 'any' type.
+  Try `npm install @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react';`
+node_modules/antd/lib/button/button.d.ts(1,24): error TS7016: Could not find a declaration file for module 'react'. '/Users/maiken/Code/system-operate-tools/node_modules/react/index.js' implicitly has an 'any' type.
+  Try `npm install @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react';`
+node_modules/antd/lib/button/button.d.ts(2,28): error TS7016: Could not find a declaration file for module 'prop-types'. '/Users/maiken/Code/system-operate-tools/node_modules/prop-types/index.js' implicitly has an 'any' type.
+  Try `npm install @types/prop-types` if it exists or add a new declaration (.d.ts) file containing `declare module 'prop-types';`
+node_modules/antd/lib/button/button.d.ts(63,15): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/calendar/Header.d.ts(1,24): error TS7016: Could not find a declaration file for module 'react'. '/Users/maiken/Code/system-operate-tools/node_modules/react/index.js' implicitly has an 'any' type.
+  Try `npm install @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react';`
+node_modules/antd/lib/calendar/Header.d.ts(23,41): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/calendar/Header.d.ts(25,61): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/calendar/Header.d.ts(30,15): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/calendar/index.d.ts(1,24): error TS7016: Could not find a declaration file for module 'react'. '/Users/maiken/Code/system-operate-tools/node_modules/react/index.js' implicitly has an 'any' type.
+  Try `npm install @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react';`
+node_modules/antd/lib/calendar/index.d.ts(2,28): error TS7016: Could not find a declaration file for module 'prop-types'. '/Users/maiken/Code/system-operate-tools/node_modules/prop-types/index.js' implicitly has an 'any' type.
+  Try `npm install @types/prop-types` if it exists or add a new declaration (.d.ts) file containing `declare module 'prop-types';`
+node_modules/antd/lib/calendar/index.d.ts(57,48): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/calendar/index.d.ts(58,47): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/calendar/index.d.ts(66,58): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/calendar/index.d.ts(68,15): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/card/Grid.d.ts(1,24): error TS7016: Could not find a declaration file for module 'react'. '/Users/maiken/Code/system-operate-tools/node_modules/react/index.js' implicitly has an 'any' type.
+  Try `npm install @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react';`
+node_modules/antd/lib/card/Grid.d.ts(7,51): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/card/index.d.ts(1,24): error TS7016: Could not find a declaration file for module 'react'. '/Users/maiken/Code/system-operate-tools/node_modules/react/index.js' implicitly has an 'any' type.
+  Try `npm install @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react';`
+node_modules/antd/lib/card/index.d.ts(53,44): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/card/index.d.ts(55,15): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/card/Meta.d.ts(1,24): error TS7016: Could not find a declaration file for module 'react'. '/Users/maiken/Code/system-operate-tools/node_modules/react/index.js' implicitly has an 'any' type.
+  Try `npm install @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react';`
+node_modules/antd/lib/card/Meta.d.ts(10,51): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/carousel/index.d.ts(1,24): error TS7016: Could not find a declaration file for module 'react'. '/Users/maiken/Code/system-operate-tools/node_modules/react/index.js' implicitly has an 'any' type.
+  Try `npm install @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react';`
+node_modules/antd/lib/carousel/index.d.ts(61,15): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/cascader/index.d.ts(1,24): error TS7016: Could not find a declaration file for module 'react'. '/Users/maiken/Code/system-operate-tools/node_modules/react/index.js' implicitly has an 'any' type.
+  Try `npm install @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react';`
+node_modules/antd/lib/cascader/index.d.ts(110,15): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/checkbox/Checkbox.d.ts(1,24): error TS7016: Could not find a declaration file for module 'react'. '/Users/maiken/Code/system-operate-tools/node_modules/react/index.js' implicitly has an 'any' type.
+  Try `npm install @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react';`
+node_modules/antd/lib/checkbox/Checkbox.d.ts(2,28): error TS7016: Could not find a declaration file for module 'prop-types'. '/Users/maiken/Code/system-operate-tools/node_modules/prop-types/index.js' implicitly has an 'any' type.
+  Try `npm install @types/prop-types` if it exists or add a new declaration (.d.ts) file containing `declare module 'prop-types';`
+node_modules/antd/lib/checkbox/Checkbox.d.ts(48,15): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/checkbox/Group.d.ts(1,24): error TS7016: Could not find a declaration file for module 'react'. '/Users/maiken/Code/system-operate-tools/node_modules/react/index.js' implicitly has an 'any' type.
+  Try `npm install @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react';`
+node_modules/antd/lib/checkbox/Group.d.ts(2,28): error TS7016: Could not find a declaration file for module 'prop-types'. '/Users/maiken/Code/system-operate-tools/node_modules/prop-types/index.js' implicitly has an 'any' type.
+  Try `npm install @types/prop-types` if it exists or add a new declaration (.d.ts) file containing `declare module 'prop-types';`
+node_modules/antd/lib/checkbox/Group.d.ts(61,15): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/collapse/Collapse.d.ts(1,24): error TS7016: Could not find a declaration file for module 'react'. '/Users/maiken/Code/system-operate-tools/node_modules/react/index.js' implicitly has an 'any' type.
+  Try `npm install @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react';`
+node_modules/antd/lib/collapse/Collapse.d.ts(26,29): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/collapse/Collapse.d.ts(27,15): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/collapse/CollapsePanel.d.ts(1,24): error TS7016: Could not find a declaration file for module 'react'. '/Users/maiken/Code/system-operate-tools/node_modules/react/index.js' implicitly has an 'any' type.
+  Try `npm install @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react';`
+node_modules/antd/lib/collapse/CollapsePanel.d.ts(14,15): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/date-picker/interface.d.ts(1,24): error TS7016: Could not find a declaration file for module 'react'. '/Users/maiken/Code/system-operate-tools/node_modules/react/index.js' implicitly has an 'any' type.
+  Try `npm install @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react';`
+node_modules/antd/lib/divider/index.d.ts(1,24): error TS7016: Could not find a declaration file for module 'react'. '/Users/maiken/Code/system-operate-tools/node_modules/react/index.js' implicitly has an 'any' type.
+  Try `npm install @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react';`
+node_modules/antd/lib/divider/index.d.ts(11,125): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/drawer/index.d.ts(1,24): error TS7016: Could not find a declaration file for module 'react'. '/Users/maiken/Code/system-operate-tools/node_modules/react/index.js' implicitly has an 'any' type.
+  Try `npm install @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react';`
+node_modules/antd/lib/drawer/index.d.ts(2,28): error TS7016: Could not find a declaration file for module 'prop-types'. '/Users/maiken/Code/system-operate-tools/node_modules/prop-types/index.js' implicitly has an 'any' type.
+  Try `npm install @types/prop-types` if it exists or add a new declaration (.d.ts) file containing `declare module 'prop-types';`
+node_modules/antd/lib/drawer/index.d.ts(70,23): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/drawer/index.d.ts(767,40): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/drawer/index.d.ts(768,15): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/dropdown/dropdown-button.d.ts(1,24): error TS7016: Could not find a declaration file for module 'react'. '/Users/maiken/Code/system-operate-tools/node_modules/react/index.js' implicitly has an 'any' type.
+  Try `npm install @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react';`
+node_modules/antd/lib/dropdown/dropdown-button.d.ts(18,15): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/dropdown/dropdown.d.ts(1,24): error TS7016: Could not find a declaration file for module 'react'. '/Users/maiken/Code/system-operate-tools/node_modules/react/index.js' implicitly has an 'any' type.
+  Try `npm install @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react';`
+node_modules/antd/lib/dropdown/dropdown.d.ts(27,15): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/form/Form.d.ts(1,24): error TS7016: Could not find a declaration file for module 'react'. '/Users/maiken/Code/system-operate-tools/node_modules/react/index.js' implicitly has an 'any' type.
+  Try `npm install @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react';`
+node_modules/antd/lib/form/Form.d.ts(2,28): error TS7016: Could not find a declaration file for module 'prop-types'. '/Users/maiken/Code/system-operate-tools/node_modules/prop-types/index.js' implicitly has an 'any' type.
+  Try `npm install @types/prop-types` if it exists or add a new declaration (.d.ts) file containing `declare module 'prop-types';`
+node_modules/antd/lib/form/Form.d.ts(144,15): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/form/FormItem.d.ts(1,24): error TS7016: Could not find a declaration file for module 'react'. '/Users/maiken/Code/system-operate-tools/node_modules/react/index.js' implicitly has an 'any' type.
+  Try `npm install @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react';`
+node_modules/antd/lib/form/FormItem.d.ts(2,28): error TS7016: Could not find a declaration file for module 'prop-types'. '/Users/maiken/Code/system-operate-tools/node_modules/prop-types/index.js' implicitly has an 'any' type.
+  Try `npm install @types/prop-types` if it exists or add a new declaration (.d.ts) file containing `declare module 'prop-types';`
+node_modules/antd/lib/form/FormItem.d.ts(55,19): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/form/FormItem.d.ts(56,20): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/form/FormItem.d.ts(58,91): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/form/FormItem.d.ts(59,47): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/form/FormItem.d.ts(62,20): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/form/FormItem.d.ts(63,24): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/form/FormItem.d.ts(64,48): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/form/FormItem.d.ts(65,15): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/grid/col.d.ts(1,24): error TS7016: Could not find a declaration file for module 'react'. '/Users/maiken/Code/system-operate-tools/node_modules/react/index.js' implicitly has an 'any' type.
+  Try `npm install @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react';`
+node_modules/antd/lib/grid/col.d.ts(2,28): error TS7016: Could not find a declaration file for module 'prop-types'. '/Users/maiken/Code/system-operate-tools/node_modules/prop-types/index.js' implicitly has an 'any' type.
+  Try `npm install @types/prop-types` if it exists or add a new declaration (.d.ts) file containing `declare module 'prop-types';`
+node_modules/antd/lib/grid/col.d.ts(40,15): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/grid/row.d.ts(1,24): error TS7016: Could not find a declaration file for module 'react'. '/Users/maiken/Code/system-operate-tools/node_modules/react/index.js' implicitly has an 'any' type.
+  Try `npm install @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react';`
+node_modules/antd/lib/grid/row.d.ts(2,28): error TS7016: Could not find a declaration file for module 'prop-types'. '/Users/maiken/Code/system-operate-tools/node_modules/prop-types/index.js' implicitly has an 'any' type.
+  Try `npm install @types/prop-types` if it exists or add a new declaration (.d.ts) file containing `declare module 'prop-types';`
+node_modules/antd/lib/grid/row.d.ts(32,15): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/icon/IconFont.d.ts(2,24): error TS7016: Could not find a declaration file for module 'react'. '/Users/maiken/Code/system-operate-tools/node_modules/react/index.js' implicitly has an 'any' type.
+  Try `npm install @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react';`
+node_modules/antd/lib/icon/index.d.ts(1,24): error TS7016: Could not find a declaration file for module 'react'. '/Users/maiken/Code/system-operate-tools/node_modules/react/index.js' implicitly has an 'any' type.
+  Try `npm install @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react';`
+node_modules/antd/lib/input-number/index.d.ts(1,24): error TS7016: Could not find a declaration file for module 'react'. '/Users/maiken/Code/system-operate-tools/node_modules/react/index.js' implicitly has an 'any' type.
+  Try `npm install @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react';`
+node_modules/antd/lib/input-number/index.d.ts(31,15): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/input/Group.d.ts(1,24): error TS7016: Could not find a declaration file for module 'react'. '/Users/maiken/Code/system-operate-tools/node_modules/react/index.js' implicitly has an 'any' type.
+  Try `npm install @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react';`
+node_modules/antd/lib/input/Input.d.ts(1,24): error TS7016: Could not find a declaration file for module 'react'. '/Users/maiken/Code/system-operate-tools/node_modules/react/index.js' implicitly has an 'any' type.
+  Try `npm install @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react';`
+node_modules/antd/lib/input/Input.d.ts(2,28): error TS7016: Could not find a declaration file for module 'prop-types'. '/Users/maiken/Code/system-operate-tools/node_modules/prop-types/index.js' implicitly has an 'any' type.
+  Try `npm install @types/prop-types` if it exists or add a new declaration (.d.ts) file containing `declare module 'prop-types';`
+node_modules/antd/lib/input/Search.d.ts(1,24): error TS7016: Could not find a declaration file for module 'react'. '/Users/maiken/Code/system-operate-tools/node_modules/react/index.js' implicitly has an 'any' type.
+  Try `npm install @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react';`
+node_modules/antd/lib/input/Search.d.ts(20,15): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/input/TextArea.d.ts(1,24): error TS7016: Could not find a declaration file for module 'react'. '/Users/maiken/Code/system-operate-tools/node_modules/react/index.js' implicitly has an 'any' type.
+  Try `npm install @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react';`
+node_modules/antd/lib/input/TextArea.d.ts(33,15): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/layout/layout.d.ts(1,24): error TS7016: Could not find a declaration file for module 'react'. '/Users/maiken/Code/system-operate-tools/node_modules/react/index.js' implicitly has an 'any' type.
+  Try `npm install @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react';`
+node_modules/antd/lib/layout/Sider.d.ts(1,24): error TS7016: Could not find a declaration file for module 'react'. '/Users/maiken/Code/system-operate-tools/node_modules/react/index.js' implicitly has an 'any' type.
+  Try `npm install @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react';`
+node_modules/antd/lib/layout/Sider.d.ts(2,28): error TS7016: Could not find a declaration file for module 'prop-types'. '/Users/maiken/Code/system-operate-tools/node_modules/prop-types/index.js' implicitly has an 'any' type.
+  Try `npm install @types/prop-types` if it exists or add a new declaration (.d.ts) file containing `declare module 'prop-types';`
+node_modules/antd/lib/layout/Sider.d.ts(59,30): error TS2304: Cannot find name 'MediaQueryListEvent'.
+node_modules/antd/lib/layout/Sider.d.ts(63,15): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/list/index.d.ts(1,24): error TS7016: Could not find a declaration file for module 'react'. '/Users/maiken/Code/system-operate-tools/node_modules/react/index.js' implicitly has an 'any' type.
+  Try `npm install @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react';`
+node_modules/antd/lib/list/index.d.ts(2,28): error TS7016: Could not find a declaration file for module 'prop-types'. '/Users/maiken/Code/system-operate-tools/node_modules/prop-types/index.js' implicitly has an 'any' type.
+  Try `npm install @types/prop-types` if it exists or add a new declaration (.d.ts) file containing `declare module 'prop-types';`
+node_modules/antd/lib/list/index.d.ts(72,49): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/list/index.d.ts(73,15): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/list/Item.d.ts(1,24): error TS7016: Could not find a declaration file for module 'react'. '/Users/maiken/Code/system-operate-tools/node_modules/react/index.js' implicitly has an 'any' type.
+  Try `npm install @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react';`
+node_modules/antd/lib/list/Item.d.ts(2,28): error TS7016: Could not find a declaration file for module 'prop-types'. '/Users/maiken/Code/system-operate-tools/node_modules/prop-types/index.js' implicitly has an 'any' type.
+  Try `npm install @types/prop-types` if it exists or add a new declaration (.d.ts) file containing `declare module 'prop-types';`
+node_modules/antd/lib/list/Item.d.ts(22,58): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/list/Item.d.ts(38,15): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/locale-provider/index.d.ts(1,24): error TS7016: Could not find a declaration file for module 'react'. '/Users/maiken/Code/system-operate-tools/node_modules/react/index.js' implicitly has an 'any' type.
+  Try `npm install @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react';`
+node_modules/antd/lib/locale-provider/index.d.ts(2,28): error TS7016: Could not find a declaration file for module 'prop-types'. '/Users/maiken/Code/system-operate-tools/node_modules/prop-types/index.js' implicitly has an 'any' type.
+  Try `npm install @types/prop-types` if it exists or add a new declaration (.d.ts) file containing `declare module 'prop-types';`
+node_modules/antd/lib/mention/index.d.ts(1,24): error TS7016: Could not find a declaration file for module 'react'. '/Users/maiken/Code/system-operate-tools/node_modules/react/index.js' implicitly has an 'any' type.
+  Try `npm install @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react';`
+node_modules/antd/lib/mention/index.d.ts(52,15): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/menu/index.d.ts(1,24): error TS7016: Could not find a declaration file for module 'react'. '/Users/maiken/Code/system-operate-tools/node_modules/react/index.js' implicitly has an 'any' type.
+  Try `npm install @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react';`
+node_modules/antd/lib/menu/index.d.ts(2,28): error TS7016: Could not find a declaration file for module 'prop-types'. '/Users/maiken/Code/system-operate-tools/node_modules/prop-types/index.js' implicitly has an 'any' type.
+  Try `npm install @types/prop-types` if it exists or add a new declaration (.d.ts) file containing `declare module 'prop-types';`
+node_modules/antd/lib/menu/index.d.ts(83,15): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/menu/MenuItem.d.ts(1,24): error TS7016: Could not find a declaration file for module 'react'. '/Users/maiken/Code/system-operate-tools/node_modules/react/index.js' implicitly has an 'any' type.
+  Try `npm install @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react';`
+node_modules/antd/lib/menu/MenuItem.d.ts(2,28): error TS7016: Could not find a declaration file for module 'prop-types'. '/Users/maiken/Code/system-operate-tools/node_modules/prop-types/index.js' implicitly has an 'any' type.
+  Try `npm install @types/prop-types` if it exists or add a new declaration (.d.ts) file containing `declare module 'prop-types';`
+node_modules/antd/lib/menu/MenuItem.d.ts(12,15): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/menu/SubMenu.d.ts(1,24): error TS7016: Could not find a declaration file for module 'react'. '/Users/maiken/Code/system-operate-tools/node_modules/react/index.js' implicitly has an 'any' type.
+  Try `npm install @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react';`
+node_modules/antd/lib/menu/SubMenu.d.ts(2,28): error TS7016: Could not find a declaration file for module 'prop-types'. '/Users/maiken/Code/system-operate-tools/node_modules/prop-types/index.js' implicitly has an 'any' type.
+  Try `npm install @types/prop-types` if it exists or add a new declaration (.d.ts) file containing `declare module 'prop-types';`
+node_modules/antd/lib/menu/SubMenu.d.ts(12,15): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/message/index.d.ts(1,24): error TS7016: Could not find a declaration file for module 'react'. '/Users/maiken/Code/system-operate-tools/node_modules/react/index.js' implicitly has an 'any' type.
+  Try `npm install @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react';`
+node_modules/antd/lib/modal/ActionButton.d.ts(1,24): error TS7016: Could not find a declaration file for module 'react'. '/Users/maiken/Code/system-operate-tools/node_modules/react/index.js' implicitly has an 'any' type.
+  Try `npm install @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react';`
+node_modules/antd/lib/modal/ActionButton.d.ts(19,15): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/modal/Modal.d.ts(1,24): error TS7016: Could not find a declaration file for module 'react'. '/Users/maiken/Code/system-operate-tools/node_modules/react/index.js' implicitly has an 'any' type.
+  Try `npm install @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react';`
+node_modules/antd/lib/modal/Modal.d.ts(2,28): error TS7016: Could not find a declaration file for module 'prop-types'. '/Users/maiken/Code/system-operate-tools/node_modules/prop-types/index.js' implicitly has an 'any' type.
+  Try `npm install @types/prop-types` if it exists or add a new declaration (.d.ts) file containing `declare module 'prop-types';`
+node_modules/antd/lib/modal/Modal.d.ts(121,44): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/modal/Modal.d.ts(122,15): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/notification/index.d.ts(1,24): error TS7016: Could not find a declaration file for module 'react'. '/Users/maiken/Code/system-operate-tools/node_modules/react/index.js' implicitly has an 'any' type.
+  Try `npm install @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react';`
+node_modules/antd/lib/pagination/Pagination.d.ts(1,24): error TS7016: Could not find a declaration file for module 'react'. '/Users/maiken/Code/system-operate-tools/node_modules/react/index.js' implicitly has an 'any' type.
+  Try `npm install @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react';`
+node_modules/antd/lib/pagination/Pagination.d.ts(35,19): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/pagination/Pagination.d.ts(36,19): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/pagination/Pagination.d.ts(37,23): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/pagination/Pagination.d.ts(38,23): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/pagination/Pagination.d.ts(40,47): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/pagination/Pagination.d.ts(41,15): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/popconfirm/index.d.ts(1,24): error TS7016: Could not find a declaration file for module 'react'. '/Users/maiken/Code/system-operate-tools/node_modules/react/index.js' implicitly has an 'any' type.
+  Try `npm install @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react';`
+node_modules/antd/lib/popconfirm/index.d.ts(30,15): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/popconfirm/index.d.ts(43,60): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/popconfirm/index.d.ts(44,15): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/popover/index.d.ts(1,24): error TS7016: Could not find a declaration file for module 'react'. '/Users/maiken/Code/system-operate-tools/node_modules/react/index.js' implicitly has an 'any' type.
+  Try `npm install @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react';`
+node_modules/antd/lib/popover/index.d.ts(19,19): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/popover/index.d.ts(21,15): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/progress/progress.d.ts(1,28): error TS7016: Could not find a declaration file for module 'prop-types'. '/Users/maiken/Code/system-operate-tools/node_modules/prop-types/index.js' implicitly has an 'any' type.
+  Try `npm install @types/prop-types` if it exists or add a new declaration (.d.ts) file containing `declare module 'prop-types';`
+node_modules/antd/lib/progress/progress.d.ts(2,24): error TS7016: Could not find a declaration file for module 'react'. '/Users/maiken/Code/system-operate-tools/node_modules/react/index.js' implicitly has an 'any' type.
+  Try `npm install @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react';`
+node_modules/antd/lib/progress/progress.d.ts(47,15): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/radio/group.d.ts(1,24): error TS7016: Could not find a declaration file for module 'react'. '/Users/maiken/Code/system-operate-tools/node_modules/react/index.js' implicitly has an 'any' type.
+  Try `npm install @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react';`
+node_modules/antd/lib/radio/group.d.ts(2,28): error TS7016: Could not find a declaration file for module 'prop-types'. '/Users/maiken/Code/system-operate-tools/node_modules/prop-types/index.js' implicitly has an 'any' type.
+  Try `npm install @types/prop-types` if it exists or add a new declaration (.d.ts) file containing `declare module 'prop-types';`
+node_modules/antd/lib/radio/group.d.ts(25,15): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/radio/interface.d.ts(1,24): error TS7016: Could not find a declaration file for module 'react'. '/Users/maiken/Code/system-operate-tools/node_modules/react/index.js' implicitly has an 'any' type.
+  Try `npm install @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react';`
+node_modules/antd/lib/radio/radio.d.ts(1,24): error TS7016: Could not find a declaration file for module 'react'. '/Users/maiken/Code/system-operate-tools/node_modules/react/index.js' implicitly has an 'any' type.
+  Try `npm install @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react';`
+node_modules/antd/lib/radio/radio.d.ts(2,28): error TS7016: Could not find a declaration file for module 'prop-types'. '/Users/maiken/Code/system-operate-tools/node_modules/prop-types/index.js' implicitly has an 'any' type.
+  Try `npm install @types/prop-types` if it exists or add a new declaration (.d.ts) file containing `declare module 'prop-types';`
+node_modules/antd/lib/radio/radio.d.ts(22,15): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/radio/radioButton.d.ts(1,24): error TS7016: Could not find a declaration file for module 'react'. '/Users/maiken/Code/system-operate-tools/node_modules/react/index.js' implicitly has an 'any' type.
+  Try `npm install @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react';`
+node_modules/antd/lib/radio/radioButton.d.ts(2,28): error TS7016: Could not find a declaration file for module 'prop-types'. '/Users/maiken/Code/system-operate-tools/node_modules/prop-types/index.js' implicitly has an 'any' type.
+  Try `npm install @types/prop-types` if it exists or add a new declaration (.d.ts) file containing `declare module 'prop-types';`
+node_modules/antd/lib/radio/radioButton.d.ts(14,15): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/rate/index.d.ts(1,24): error TS7016: Could not find a declaration file for module 'react'. '/Users/maiken/Code/system-operate-tools/node_modules/react/index.js' implicitly has an 'any' type.
+  Try `npm install @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react';`
+node_modules/antd/lib/rate/index.d.ts(2,28): error TS7016: Could not find a declaration file for module 'prop-types'. '/Users/maiken/Code/system-operate-tools/node_modules/prop-types/index.js' implicitly has an 'any' type.
+  Try `npm install @types/prop-types` if it exists or add a new declaration (.d.ts) file containing `declare module 'prop-types';`
+node_modules/antd/lib/rate/index.d.ts(24,20): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/rate/index.d.ts(30,15): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/select/index.d.ts(1,24): error TS7016: Could not find a declaration file for module 'react'. '/Users/maiken/Code/system-operate-tools/node_modules/react/index.js' implicitly has an 'any' type.
+  Try `npm install @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react';`
+node_modules/antd/lib/select/index.d.ts(2,28): error TS7016: Could not find a declaration file for module 'prop-types'. '/Users/maiken/Code/system-operate-tools/node_modules/prop-types/index.js' implicitly has an 'any' type.
+  Try `npm install @types/prop-types` if it exists or add a new declaration (.d.ts) file containing `declare module 'prop-types';`
+node_modules/antd/lib/select/index.d.ts(103,45): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/select/index.d.ts(104,15): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/skeleton/Avatar.d.ts(1,24): error TS7016: Could not find a declaration file for module 'react'. '/Users/maiken/Code/system-operate-tools/node_modules/react/index.js' implicitly has an 'any' type.
+  Try `npm install @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react';`
+node_modules/antd/lib/skeleton/Avatar.d.ts(11,15): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/skeleton/index.d.ts(1,24): error TS7016: Could not find a declaration file for module 'react'. '/Users/maiken/Code/system-operate-tools/node_modules/react/index.js' implicitly has an 'any' type.
+  Try `npm install @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react';`
+node_modules/antd/lib/skeleton/Paragraph.d.ts(1,24): error TS7016: Could not find a declaration file for module 'react'. '/Users/maiken/Code/system-operate-tools/node_modules/react/index.js' implicitly has an 'any' type.
+  Try `npm install @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react';`
+node_modules/antd/lib/skeleton/Paragraph.d.ts(13,15): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/skeleton/Title.d.ts(1,24): error TS7016: Could not find a declaration file for module 'react'. '/Users/maiken/Code/system-operate-tools/node_modules/react/index.js' implicitly has an 'any' type.
+  Try `npm install @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react';`
+node_modules/antd/lib/skeleton/Title.d.ts(10,15): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/slider/index.d.ts(1,24): error TS7016: Could not find a declaration file for module 'react'. '/Users/maiken/Code/system-operate-tools/node_modules/react/index.js' implicitly has an 'any' type.
+  Try `npm install @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react';`
+node_modules/antd/lib/slider/index.d.ts(54,15): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/spin/index.d.ts(1,24): error TS7016: Could not find a declaration file for module 'react'. '/Users/maiken/Code/system-operate-tools/node_modules/react/index.js' implicitly has an 'any' type.
+  Try `npm install @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react';`
+node_modules/antd/lib/spin/index.d.ts(2,28): error TS7016: Could not find a declaration file for module 'prop-types'. '/Users/maiken/Code/system-operate-tools/node_modules/prop-types/index.js' implicitly has an 'any' type.
+  Try `npm install @types/prop-types` if it exists or add a new declaration (.d.ts) file containing `declare module 'prop-types';`
+node_modules/antd/lib/spin/index.d.ts(44,15): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/steps/index.d.ts(1,24): error TS7016: Could not find a declaration file for module 'react'. '/Users/maiken/Code/system-operate-tools/node_modules/react/index.js' implicitly has an 'any' type.
+  Try `npm install @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react';`
+node_modules/antd/lib/steps/index.d.ts(2,28): error TS7016: Could not find a declaration file for module 'prop-types'. '/Users/maiken/Code/system-operate-tools/node_modules/prop-types/index.js' implicitly has an 'any' type.
+  Try `npm install @types/prop-types` if it exists or add a new declaration (.d.ts) file containing `declare module 'prop-types';`
+node_modules/antd/lib/steps/index.d.ts(27,15): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/switch/index.d.ts(1,24): error TS7016: Could not find a declaration file for module 'react'. '/Users/maiken/Code/system-operate-tools/node_modules/react/index.js' implicitly has an 'any' type.
+  Try `npm install @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react';`
+node_modules/antd/lib/switch/index.d.ts(2,28): error TS7016: Could not find a declaration file for module 'prop-types'. '/Users/maiken/Code/system-operate-tools/node_modules/prop-types/index.js' implicitly has an 'any' type.
+  Try `npm install @types/prop-types` if it exists or add a new declaration (.d.ts) file containing `declare module 'prop-types';`
+node_modules/antd/lib/switch/index.d.ts(30,15): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/table/Column.d.ts(1,24): error TS7016: Could not find a declaration file for module 'react'. '/Users/maiken/Code/system-operate-tools/node_modules/react/index.js' implicitly has an 'any' type.
+  Try `npm install @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react';`
+node_modules/antd/lib/table/ColumnGroup.d.ts(1,24): error TS7016: Could not find a declaration file for module 'react'. '/Users/maiken/Code/system-operate-tools/node_modules/react/index.js' implicitly has an 'any' type.
+  Try `npm install @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react';`
+node_modules/antd/lib/table/interface.d.ts(1,24): error TS7016: Could not find a declaration file for module 'react'. '/Users/maiken/Code/system-operate-tools/node_modules/react/index.js' implicitly has an 'any' type.
+  Try `npm install @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react';`
+node_modules/antd/lib/table/Table.d.ts(1,24): error TS7016: Could not find a declaration file for module 'react'. '/Users/maiken/Code/system-operate-tools/node_modules/react/index.js' implicitly has an 'any' type.
+  Try `npm install @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react';`
+node_modules/antd/lib/table/Table.d.ts(2,28): error TS7016: Could not find a declaration file for module 'prop-types'. '/Users/maiken/Code/system-operate-tools/node_modules/prop-types/index.js' implicitly has an 'any' type.
+  Try `npm install @types/prop-types` if it exists or add a new declaration (.d.ts) file containing `declare module 'prop-types';`
+node_modules/antd/lib/table/Table.d.ts(75,107): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/table/Table.d.ts(85,51): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/table/Table.d.ts(94,70): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/table/Table.d.ts(95,15): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/tabs/index.d.ts(1,24): error TS7016: Could not find a declaration file for module 'react'. '/Users/maiken/Code/system-operate-tools/node_modules/react/index.js' implicitly has an 'any' type.
+  Try `npm install @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react';`
+node_modules/antd/lib/tabs/index.d.ts(48,15): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/tag/CheckableTag.d.ts(1,24): error TS7016: Could not find a declaration file for module 'react'. '/Users/maiken/Code/system-operate-tools/node_modules/react/index.js' implicitly has an 'any' type.
+  Try `npm install @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react';`
+node_modules/antd/lib/tag/CheckableTag.d.ts(10,15): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/tag/index.d.ts(1,24): error TS7016: Could not find a declaration file for module 'react'. '/Users/maiken/Code/system-operate-tools/node_modules/react/index.js' implicitly has an 'any' type.
+  Try `npm install @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react';`
+node_modules/antd/lib/tag/index.d.ts(42,15): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/time-picker/index.d.ts(1,24): error TS7016: Could not find a declaration file for module 'react'. '/Users/maiken/Code/system-operate-tools/node_modules/react/index.js' implicitly has an 'any' type.
+  Try `npm install @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react';`
+node_modules/antd/lib/time-picker/index.d.ts(70,53): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/time-picker/index.d.ts(71,15): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/timeline/Timeline.d.ts(1,24): error TS7016: Could not find a declaration file for module 'react'. '/Users/maiken/Code/system-operate-tools/node_modules/react/index.js' implicitly has an 'any' type.
+  Try `npm install @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react';`
+node_modules/antd/lib/timeline/Timeline.d.ts(20,15): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/timeline/TimelineItem.d.ts(1,24): error TS7016: Could not find a declaration file for module 'react'. '/Users/maiken/Code/system-operate-tools/node_modules/react/index.js' implicitly has an 'any' type.
+  Try `npm install @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react';`
+node_modules/antd/lib/timeline/TimelineItem.d.ts(16,15): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/tooltip/index.d.ts(1,24): error TS7016: Could not find a declaration file for module 'react'. '/Users/maiken/Code/system-operate-tools/node_modules/react/index.js' implicitly has an 'any' type.
+  Try `npm install @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react';`
+node_modules/antd/lib/tooltip/index.d.ts(67,15): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/transfer/index.d.ts(1,24): error TS7016: Could not find a declaration file for module 'react'. '/Users/maiken/Code/system-operate-tools/node_modules/react/index.js' implicitly has an 'any' type.
+  Try `npm install @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react';`
+node_modules/antd/lib/transfer/index.d.ts(2,28): error TS7016: Could not find a declaration file for module 'prop-types'. '/Users/maiken/Code/system-operate-tools/node_modules/prop-types/index.js' implicitly has an 'any' type.
+  Try `npm install @types/prop-types` if it exists or add a new declaration (.d.ts) file containing `declare module 'prop-types';`
+node_modules/antd/lib/transfer/index.d.ts(129,57): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/transfer/index.d.ts(130,15): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/transfer/list.d.ts(1,24): error TS7016: Could not find a declaration file for module 'react'. '/Users/maiken/Code/system-operate-tools/node_modules/react/index.js' implicitly has an 'any' type.
+  Try `npm install @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react';`
+node_modules/antd/lib/transfer/list.d.ts(55,15): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/transfer/operation.d.ts(1,24): error TS7016: Could not find a declaration file for module 'react'. '/Users/maiken/Code/system-operate-tools/node_modules/react/index.js' implicitly has an 'any' type.
+  Try `npm install @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react';`
+node_modules/antd/lib/transfer/operation.d.ts(14,15): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/transfer/search.d.ts(1,24): error TS7016: Could not find a declaration file for module 'react'. '/Users/maiken/Code/system-operate-tools/node_modules/react/index.js' implicitly has an 'any' type.
+  Try `npm install @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react';`
+node_modules/antd/lib/transfer/search.d.ts(15,15): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/tree-select/index.d.ts(1,24): error TS7016: Could not find a declaration file for module 'react'. '/Users/maiken/Code/system-operate-tools/node_modules/react/index.js' implicitly has an 'any' type.
+  Try `npm install @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react';`
+node_modules/antd/lib/tree-select/index.d.ts(22,68): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/tree-select/index.d.ts(23,49): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/tree-select/index.d.ts(24,15): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/tree-select/interface.d.ts(1,24): error TS7016: Could not find a declaration file for module 'react'. '/Users/maiken/Code/system-operate-tools/node_modules/react/index.js' implicitly has an 'any' type.
+  Try `npm install @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react';`
+node_modules/antd/lib/tree/DirectoryTree.d.ts(1,24): error TS7016: Could not find a declaration file for module 'react'. '/Users/maiken/Code/system-operate-tools/node_modules/react/index.js' implicitly has an 'any' type.
+  Try `npm install @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react';`
+node_modules/antd/lib/tree/DirectoryTree.d.ts(31,15): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/tree/Tree.d.ts(1,24): error TS7016: Could not find a declaration file for module 'react'. '/Users/maiken/Code/system-operate-tools/node_modules/react/index.js' implicitly has an 'any' type.
+  Try `npm install @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react';`
+node_modules/antd/lib/tree/Tree.d.ts(160,78): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/tree/Tree.d.ts(162,15): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/upload/Dragger.d.ts(1,24): error TS7016: Could not find a declaration file for module 'react'. '/Users/maiken/Code/system-operate-tools/node_modules/react/index.js' implicitly has an 'any' type.
+  Try `npm install @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react';`
+node_modules/antd/lib/upload/Dragger.d.ts(7,15): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/upload/interface.d.ts(1,24): error TS7016: Could not find a declaration file for module 'react'. '/Users/maiken/Code/system-operate-tools/node_modules/react/index.js' implicitly has an 'any' type.
+  Try `npm install @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react';`
+node_modules/antd/lib/upload/Upload.d.ts(1,24): error TS7016: Could not find a declaration file for module 'react'. '/Users/maiken/Code/system-operate-tools/node_modules/react/index.js' implicitly has an 'any' type.
+  Try `npm install @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react';`
+node_modules/antd/lib/upload/Upload.d.ts(44,49): error TS2503: Cannot find namespace 'JSX'.
+node_modules/antd/lib/upload/Upload.d.ts(45,15): error TS2503: Cannot find namespace 'JSX'.
+src/main.ts(3,24): error TS7016: Could not find a declaration file for module 'react'. '/Users/maiken/Code/system-operate-tools/node_modules/react/index.js' implicitly has an 'any' type.
+  Try `npm install @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react';`
