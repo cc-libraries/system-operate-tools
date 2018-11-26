@@ -1,5 +1,9 @@
 import { app, BrowserWindow } from "electron";
 import * as path from "path";
+// import * as React from 'react';
+// import { Input } from 'antd';
+
+const { Input } = require('antd');
 
 let mainWindow: Electron.BrowserWindow;
 
@@ -24,6 +28,8 @@ function createWindow() {
     // when you should delete the corresponding element.
     mainWindow = null;
   });
+
+  
 }
 
 // This method will be called when Electron has finished
