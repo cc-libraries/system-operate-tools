@@ -3,6 +3,7 @@
         "module": "commonjs",
         "noImplicitAny": true,
         "sourceMap": true,
+        "jsx": "react",
         "outDir": "dist",
         "baseUrl": ".",
         "paths": {
@@ -14,5 +15,8 @@
     ],
     "typeRoots": [
         "node_modules/@types"
+    ],
+    "exclude": [
+        "webpack"
     ]
 }

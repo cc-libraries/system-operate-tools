@@ -3,7 +3,7 @@ import * as path from "path";
 // import * as React from 'react';
 // import { Input } from 'antd';
 
-const { Input } = require('antd');
+// const { Input } = require('antd');
 
 let mainWindow: Electron.BrowserWindow;
 
