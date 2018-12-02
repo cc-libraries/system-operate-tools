@@ -13,16 +13,20 @@
         "productivity"
     ],
     "author": "hello_chenchen",
-    "dependencies": {},
-    "devDependencies": {
+    "dependencies": {
         "antd": "^3.10.9",
-        "babel-plugin-import": "^1.11.0",
-        "electron": "^2.0.2",
+        "electron": "^2.0.14",
         "react": "^16.6.3",
         "react-dom": "^16.6.3",
-        "react-scripts-ts": "^3.1.0",
-        "tslint": "^5.10.0",
-        "typescript": "^2.8.3"
+        "typescript": "^3.2.0"
+    },
+    "devDependencies": {
+        "@types/react": "^16.7.11",
+        "@types/react-dom": "^16.0.11",
+        "atool-build": "^1.0.4",
+        "babel-plugin-import": "^1.11.0",
+        "react-scripts-ts": "^4.0.8",
+        "tslint": "^5.10.0"
     },
     "license": "ISC",
     "bugs": {
