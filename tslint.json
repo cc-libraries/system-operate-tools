@@ -1,5 +1,5 @@
 {
-    "extends": "tslint:recommended",
+    "extends": [ "tslint:recommended", "tslint-react" ],
     "rules": {
       "max-line-length": {
         "options": [
@@ -10,7 +10,10 @@
       "no-arg": true,
       "no-bitwise": true,
       "no-conditional-assignment": true,
-      "no-consecutive-blank-lines": false
+      "no-consecutive-blank-lines": false,
+      "ordered-imports": false,
+      "eofline": false,
+      "trailing-comma": [true, {"multiline": "always", "singleline": "never"}]
     },
     "jsRules": {
       "max-line-length": {

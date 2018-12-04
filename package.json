@@ -1,35 +1,40 @@
 {
-    "name": "system-operate-tools",
-    "version": "0.0.1",
-    "description": "a serious tools for you to operate your system",
-    "scripts": {
-        "build": "tsc",
-        "watch": "tsc -w",
-        "lint": "tslint -c tslint.json -p tsconfig.json",
-        "start": "npm run build && electron ./dist/main.js"
-    },
-    "repository": "https://github.com/hello-chenchen/system-operate-tools.git",
-    "keywords": [
-        "productivity"
-    ],
-    "author": "hello_chenchen",
-    "dependencies": {
-        "antd": "^3.10.9",
-        "electron": "^2.0.14",
-        "react": "^16.6.3",
-        "react-dom": "^16.6.3",
-        "typescript": "^3.2.0"
-    },
-    "devDependencies": {
-        "@types/react": "^16.7.11",
-        "@types/react-dom": "^16.0.11",
-        "babel-plugin-import": "^1.11.0",
-        "react-scripts-ts": "^4.0.8",
-        "tslint": "^5.10.0"
-    },
-    "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/hello-chenchen/system-operate-tools/issues"
-    },
-    "homepage": "https://github.com/hello-chenchen/system-operate-tools#readme"
+  "name": "system-operate-tools",
+  "version": "0.0.1",
+  "description": "a serious tools for you to operate your system",
+  "main": "src/main.tsx",
+  "scripts": {
+    "build": "react-scripts-ts build",
+    "start": "electron ."
+  },
+  "repository": "https://github.com/hello-chenchen/system-operate-tools.git",
+  "keywords": [
+    "productivity"
+  ],
+  "author": "hello_chenchen",
+  "dependencies": {
+    "antd": "^3.11.0",
+    "electron": "^2.0.14",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "react-scripts-ts": "^4.0.8"
+  },
+  "devDependencies": {
+    "@types/react": "^16.7.11",
+    "@types/node": "^10.12.11",
+    "@types/react-dom": "^16.0.11",
+    "tslint": "^5.10.0",
+    "typescript": "^3.2.1"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hello-chenchen/system-operate-tools/issues"
+  },
+  "homepage": "https://github.com/hello-chenchen/system-operate-tools#readme",
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }

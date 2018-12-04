@@ -12,7 +12,6 @@ function createWindow() {
   mainWindow = new BrowserWindow({
     height: 600,
     width: 800,
-    frame: false
   });
 
   // and load the index.html of the app.
@@ -29,7 +28,6 @@ function createWindow() {
     mainWindow = null;
   });
 
-  
 }
 
 // This method will be called when Electron has finished
