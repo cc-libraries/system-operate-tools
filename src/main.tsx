@@ -12,6 +12,7 @@ function createWindow() {
   mainWindow = new BrowserWindow({
     height: 600,
     width: 800,
+    frame: false
   });
 
   // and load the index.html of the app.
@@ -27,7 +28,6 @@ function createWindow() {
     // when you should delete the corresponding element.
     mainWindow = null;
   });
-
 }
 
 // This method will be called when Electron has finished
