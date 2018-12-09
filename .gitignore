@@ -2,5 +2,3 @@
 /dist/
 **/package-lock.json
 /tmp/tmp.log
-/build/
-**/yarn.lock

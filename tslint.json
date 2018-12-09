@@ -1,5 +1,5 @@
 {
-    "extends": [ "tslint:recommended", "tslint-react" ],
+    "extends": "tslint:recommended",
     "rules": {
       "max-line-length": {
         "options": [
@@ -11,9 +11,10 @@
       "no-bitwise": true,
       "no-conditional-assignment": true,
       "no-consecutive-blank-lines": false,
-      "ordered-imports": false,
-      "eofline": false,
-      "trailing-comma": [true, {"multiline": "always", "singleline": "never"}]
+      "quotemark": [false],
+      "trailing-comma": false,
+      "object-literal-sort-keys": false,
+      "eofline": false
     },
     "jsRules": {
       "max-line-length": {
