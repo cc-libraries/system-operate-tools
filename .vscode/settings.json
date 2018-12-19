@@ -1,0 +1,11 @@
+{
+    "todohighlight.keywords": [
+        {
+            "text": "FIXED:",
+            "color": "white",
+            "backgroundColor": "blue",
+            "overviewRulerColor": "white"
+        }
+    ],
+    "eslint.options": {"configFile": ".eslintrc.js"}
+}

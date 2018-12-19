@@ -1,35 +1,44 @@
 {
-    "name": "system-operate-tools",
-    "version": "0.0.1",
-    "description": "a serious tools for you to operate your system",
-    "scripts": {
-        "build": "tsc",
-        "watch": "tsc -w",
-        "lint": "tslint -c tslint.json -p tsconfig.json",
-        "start": "npm run build && electron ./dist/main.js"
-    },
-    "repository": "https://github.com/hello-chenchen/system-operate-tools.git",
-    "keywords": [
-        "productivity"
-    ],
-    "author": "hello_chenchen",
-    "dependencies": {
-        "antd": "^3.10.9",
-        "electron": "^2.0.14",
-        "react": "^16.6.3",
-        "react-dom": "^16.6.3",
-        "typescript": "^3.2.0"
-    },
-    "devDependencies": {
-        "@types/react": "^16.7.11",
-        "@types/react-dom": "^16.0.11",
-        "babel-plugin-import": "^1.11.0",
-        "react-scripts-ts": "^4.0.8",
-        "tslint": "^5.10.0"
-    },
-    "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/hello-chenchen/system-operate-tools/issues"
-    },
-    "homepage": "https://github.com/hello-chenchen/system-operate-tools#readme"
+  "name": "electron-webpack",
+  "version": "0.0.1",
+  "description": "based on electron and webpack",
+  "scripts": {
+    "start": "electron ./dist/main.js",
+    "build": "webpack --c webpack.config.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hello-chenchen/electron-webpack.git"
+  },
+  "author": "hello_chenchen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hello-chenchen/electron-webpack/issues"
+  },
+  "homepage": "https://github.com/hello-chenchen/electron-webpack#readme",
+  "devDependencies": {
+    "antd": "^3.11.2",
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^10.0.1",
+    "babel-plugin-import": "^1.11.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "clean-webpack-plugin": "^1.0.0",
+    "css-loader": "1.0.1",
+    "electron": "^3.0.12",
+    "eslint": "^5.10.0",
+    "html-webpack-plugin": "^3.2.0",
+    "less": "^3.9.0",
+    "less-loader": "^4.1.0",
+    "postcss-loader": "^3.0.0",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.27.1",
+    "webpack-cli": "^3.1.2"
+  },
+  "dependencies": {
+    "babel-loader": "^7.1.5"
+  }
 }
