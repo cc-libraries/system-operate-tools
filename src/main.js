@@ -10,7 +10,10 @@ function createWindow () {
   // Create the browser window.
   mainWindow = new BrowserWindow({
     width: 300,
-    height: 600
+    height: 600,
+    webPreferences: {
+      experimentalFeatures: true
+    }
   });
 
   // and load the index.html of the app.
