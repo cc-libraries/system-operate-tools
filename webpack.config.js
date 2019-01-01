@@ -1,7 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
-const webpack = require('webpack');
 
 const commonConfig = {
   output: {
@@ -58,10 +57,8 @@ module.exports = [
           template: "./public/index.html",
           filename: "index.html",
           inject: false //FIXED: https://github.com/petehunt/webpack-howto/issues/46#issuecomment-164285430
-        }),
-        new webpack.ContextReplacementPlugin(/bindings$/, /^$/)
-      ],
-      externals: ["bindings"]
+        })
+      ]
     },
     commonConfig
   ),
@@ -71,12 +68,8 @@ module.exports = [
       entry: {
         index: "./src/ui/index.jsx",
         MainWindows: "./src/ui/MainWindows.jsx",
-        Clipboard: "./src/util/clipboard/Clipboard.js"
-      },
-      plugins: [
-        new webpack.ContextReplacementPlugin(/bindings$/, /^$/)
-      ],
-      externals: ["bindings"]
+        Clipboard: "./src/bundles/clipboard/Clipboard.js"
+      }
     },
     commonConfig
   )
