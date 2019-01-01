@@ -67,7 +67,8 @@ module.exports = [
       target: "electron-renderer",
       entry: {
         index: "./src/ui/index.jsx",
-        MainWindows: "./src/ui/MainWindows.jsx"
+        MainWindows: "./src/ui/MainWindows.jsx",
+        Clipboard: "./src/bundles/clipboard/Clipboard.js"
       }
     },
     commonConfig
