@@ -25,6 +25,10 @@ const commonConfig = {
           }
         ]
       },
+      {
+        test: /\.node$/,
+        use: 'node-loader'
+      },
       { test: /\.css$/, loader: 'style-loader!css-loader!postcss-loader' },
       { test: /\.less$/,
         use: [
@@ -68,7 +72,7 @@ module.exports = [
       entry: {
         index: "./src/ui/index.jsx",
         MainWindows: "./src/ui/MainWindows.jsx",
-        Clipboard: "./src/bundles/clipboard/Clipboard.js"
+        Clipboard: "./src/util/clipboard/Clipboard.js"
       }
     },
     commonConfig
