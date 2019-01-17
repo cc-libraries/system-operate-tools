@@ -1,5 +1,6 @@
 // Modules to control application life and create native browser window
 const {app, BrowserWindow, clipboard} = require('electron');
+const {path} = require('path');
 let mime = require('mime-types');
 
 // Keep a global reference of the window object, if you don't, the window will
@@ -17,7 +18,9 @@ function createWindow () {
   });
 
   // and load the index.html of the app.
-  let htmlFile = __dirname + '/index.html';
+  // let htmlFile = __dirname + '/index.html';
+  // let htmlFile = path.resolve(path.join(__dirname,'./index.html'));
+  let htmlFile = '/Users/maiken/Code/system-operate-tools/dist/index.html';
   mainWindow.loadFile(htmlFile);
 
   //Open the DevTools

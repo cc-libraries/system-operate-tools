@@ -3,6 +3,12 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 const commonConfig = {
+  resolve: {
+    extensions: ['.js']
+  },
+  externals: {
+    sqlite3: 'commonjs sqlite3',
+  },
   output: {
     filename: '[name].js',
     path: path.resolve(__dirname, 'dist'),
@@ -10,12 +16,13 @@ const commonConfig = {
   },
   devtool: 'inline-source-map',
   node: {
-    __dirname: false
+    __dirname: true
   },
   stats: {//FIXED: https://github.com/jantimon/html-webpack-plugin/issues/895
     children: false
   },
   module: {
+    noParse: [/aws-sdk/],
     rules: [
       {
         test: /\.jsx?$/,
@@ -25,10 +32,10 @@ const commonConfig = {
           }
         ]
       },
-      {
-        test: /\.node$/,
-        use: 'node-loader'
-      },
+      // {
+      //   test: /\.node$/,
+      //   use: 'node-loader'
+      // },
       { test: /\.css$/, loader: 'style-loader!css-loader!postcss-loader' },
       { test: /\.less$/,
         use: [
@@ -45,6 +52,15 @@ const commonConfig = {
             }
           }
         ]
+      },
+      {
+        test: /tar[\\/].*\.js$/,
+        loader: 'babel-loader!octal-number-loader' //FIXED: https://github.com/googleapis/google-cloud-node/issues/1821#issuecomment-282507932
+      },
+      {
+        type: 'javascript/auto',
+        test: /\.json$/i,
+        loader: 'json-loader'
       }
     ]
   }
@@ -58,7 +74,7 @@ module.exports = [
       plugins: [
         new CleanWebpackPlugin(["dist"]),
         new HtmlWebpackPlugin({
-          template: "./public/index.html",
+          template: "./src/index.html",
           filename: "index.html",
           inject: false //FIXED: https://github.com/petehunt/webpack-howto/issues/46#issuecomment-164285430
         })
