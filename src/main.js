@@ -10,17 +10,15 @@ let mainWindow;
 function createWindow () {
   // Create the browser window.
   mainWindow = new BrowserWindow({
-    width: 300,
-    height: 600,
+    width: 900,
+    height: 900,
     webPreferences: {
-      experimentalFeatures: true
+      nodeIntegration: true
     }
   });
 
   // and load the index.html of the app.
-  // let htmlFile = __dirname + '/index.html';
-  // let htmlFile = path.resolve(path.join(__dirname,'./index.html'));
-  let htmlFile = '/Users/maiken/Code/system-operate-tools/dist/index.html';
+  let htmlFile = __dirname + '/index.html';
   mainWindow.loadFile(htmlFile);
 
   //Open the DevTools

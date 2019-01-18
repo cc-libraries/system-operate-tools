@@ -16,13 +16,12 @@ const commonConfig = {
   },
   devtool: 'inline-source-map',
   node: {
-    __dirname: true
+    __dirname: false
   },
   stats: {//FIXED: https://github.com/jantimon/html-webpack-plugin/issues/895
     children: false
   },
   module: {
-    noParse: [/aws-sdk/],
     rules: [
       {
         test: /\.jsx?$/,
@@ -32,7 +31,7 @@ const commonConfig = {
           }
         ]
       },
-      // {
+      // {  //TODO: maybe need to remove
       //   test: /\.node$/,
       //   use: 'node-loader'
       // },
@@ -58,7 +57,7 @@ const commonConfig = {
         loader: 'babel-loader!octal-number-loader' //FIXED: https://github.com/googleapis/google-cloud-node/issues/1821#issuecomment-282507932
       },
       {
-        type: 'javascript/auto',
+        type: 'javascript/auto',  //FIXED: https://github.com/webpack/webpack/issues/6586#issuecomment-368677035
         test: /\.json$/i,
         loader: 'json-loader'
       }
