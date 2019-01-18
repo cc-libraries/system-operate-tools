@@ -1,6 +1,6 @@
-const {clipboard} = require('electron');
+import { clipboard } from 'electron';
 // const {binding} = require('./../../../lib/addons.node');
-const {sqlite3} = require('sqlite3');
+import { Database } from 'sqlite3';
 
 class Clipboard {
   static readBuffer() {
@@ -8,8 +8,7 @@ class Clipboard {
     // console.log("hello_chenchen: " + binding.hello());
     // console.log("hello_chenchen: " + JSON.stringify(availableFormats) + "length: " + availableFormats.length);  
     console.log(clipboard);
-    console.log(sqlite3);
-    // var db1 = new sqlite3;
+    console.log(Database);
     // var db = db1.Database(':memory:');
     // db.serialize(function() {
     //   db.run("CREATE TABLE lorem (info TEXT)");
