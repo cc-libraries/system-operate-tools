@@ -6,7 +6,7 @@ class MainWindows extends React.Component {
   render() {
     let Search = Input.Search;
     return <div>
-      <Search placeholder="input search text" enterButton="Search" size="large" onSearch={value => Clipboard.readBuffer()} />
+      <Search placeholder="input search text" enterButton="Search" size="large" onSearch={value => new Clipboard().readBuffer()} />
     </div>;
   }
 }

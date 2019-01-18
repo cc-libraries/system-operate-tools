@@ -3,12 +3,19 @@ import { clipboard } from 'electron';
 import { Database } from 'sqlite3';
 
 class Clipboard {
-  static readBuffer() {
+
+  constructor() {}
+  readBuffer() {
     let availableFormats = clipboard.read('CBF_TEXT');
     // console.log("hello_chenchen: " + binding.hello());
     // console.log("hello_chenchen: " + JSON.stringify(availableFormats) + "length: " + availableFormats.length);
     console.log(Database);
 
+    this.sqlite3Foo();
+
+    return availableFormats;
+  }
+  sqlite3Foo() {
     var db = new Database(':memory:');
 
     db.serialize(function() {
@@ -26,8 +33,6 @@ class Clipboard {
     });
 
     db.close();
-
-    return availableFormats;
   }
 }
 
