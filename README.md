@@ -11,7 +11,7 @@ for **mac**:
 
 for **windows**:
 
-`npm install sqlite3 --build-from-source --runtime=node-webkit --target_arch=x64 --target=0.31.4 --msvs_version=2017`
+`npm install sqlite3 --build-from-source --runtime=electron --target=4.0.1 --msvs_version=2015`
 
 
 ### FIXED:
