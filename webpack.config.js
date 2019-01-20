@@ -11,7 +11,8 @@ const commonConfig = {
   },
   devtool: 'inline-source-map',
   node: {
-    __dirname: false
+    __dirname: false,
+    nodobjc: "empty"
   },
   stats: {//FIXED: https://github.com/jantimon/html-webpack-plugin/issues/895
     children: false
@@ -74,7 +75,7 @@ module.exports = [
         Clipboard: "./src/util/clipboard/Clipboard.js"
       },
       plugins: [
-        new webpack.ContextReplacementPlugin(/bindings$/, /^$/)
+        new webpack.ContextReplacementPlugin(/bindings$/, /^$/),
       ],
       externals: ["bindings"]
     },

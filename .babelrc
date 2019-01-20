@@ -1,5 +1,6 @@
 {
     "presets": ["react"],
+    "ignore": "node_modules",
     "plugins": [
         [
             "import",
