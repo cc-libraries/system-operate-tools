@@ -7,7 +7,7 @@ compile for you electron version. **target** is electron version
 
 for **mac**:
 
-`npm install sqlite3 --build-from-source --runtime=electron --target=4.0.1`
+`npm install sqlite3 --build-from-source --runtime=electron --target=4.0.1 --dist-url=https://atom.io/download/electron`
 
 for **windows**:
 
