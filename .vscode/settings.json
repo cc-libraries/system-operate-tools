@@ -1,19 +1,25 @@
 {
     "todohighlight.keywords": [
         {
-            "text": "FIXED:",
+            "text": "TODO",
+            "color": "white",
+            "backgroundColor": "orange",
+            "overviewRulerColor": "white"
+        },
+        {
+            "text": "FIXED",
             "color": "white",
             "backgroundColor": "blue",
             "overviewRulerColor": "white"
         },
         {
-            "text": "LINK:",
+            "text": "LINK",
             "color": "white",
             "backgroundColor": "green",
             "overviewRulerColor": "white"
         },
         {
-            "text": "COMPILE:",
+            "text": "COMPILE",
             "color": "white",
             "backgroundColor": "red",
             "overviewRulerColor": "white"
