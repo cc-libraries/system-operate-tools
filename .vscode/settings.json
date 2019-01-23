@@ -9,13 +9,13 @@
         {
             "text": "FIXED",
             "color": "white",
-            "backgroundColor": "blue",
+            "backgroundColor": "green",
             "overviewRulerColor": "white"
         },
         {
             "text": "LINK",
             "color": "white",
-            "backgroundColor": "green",
+            "backgroundColor": "blue",
             "overviewRulerColor": "white"
         },
         {
