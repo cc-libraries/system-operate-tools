@@ -1,5 +1,8 @@
 # system-operate-tools
-a series tools for you to operate your system
+  A series tools for you to operate your system
+
+## NOTICED!!!:
+  **Not all the branches support all these informations in the below. Actually, master branch is the most stable and less features. And in most situations, you can find these feature by the key words in name of branch. If you still have question please create issue in 'help wanted' label.**
 
 ## Suport Platforms:
 - Linux (Current ubuntu 16.04 default desktop tested)
@@ -15,7 +18,7 @@ a series tools for you to operate your system
 - gyp
 
 ## Comments Highlight Style:
-Suggestion: [TODO Highlight](https://marketplace.visualstudio.com/items?itemName=wayou.vscode-todo-highlight)
+  suggestion: [TODO Highlight](https://marketplace.visualstudio.com/items?itemName=wayou.vscode-todo-highlight)
 - TODO blue
 - FIXED green
 - COMPILE red
