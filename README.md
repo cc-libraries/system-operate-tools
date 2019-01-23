@@ -19,9 +19,10 @@
 
 ## Comments Highlight Style:
   suggestion: [TODO Highlight](https://marketplace.visualstudio.com/items?itemName=wayou.vscode-todo-highlight)
-- TODO blue
+- TODO orange
 - FIXED green
 - COMPILE red
+- LINK blue
 
 ## Issues:
 - **issue list:** https://github.com/hello-chenchen/system-operate-tools/issues
