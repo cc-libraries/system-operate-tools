@@ -1,21 +1,25 @@
-import {clipboard} from 'electron';
-var $ = require('nodobjc');
+// import {clipboard} from 'electron';
+// import {ref} from 'ref';
+// import {ffi} from 'ffi';
+var ffi = require('ffi');
 // import {$} from 'nodobjc';
-$.framework('Foundation');
+// $.framework('Foundation');
 
 class Clipboard {
   static readBuffer() {
-    let availableFormats = clipboard.readBuffer();
-    console.log("hello_chenchen: " + JSON.stringify(availableFormats) + "length: " + availableFormats.length);
     // let demo = "ccccc";
     // console.log($);
     // NSStrings and JavaScript Strings are distinct objects, you must create an
     // NSString from a JS String when an Objective-C class method requires one.
-    var string = $.NSString('stringWithUTF8String', 'Hello Objective-C World!');
-
+    // var string = $.NSString('stringWithUTF8String', 'Hello Objective-C World!');
+    if (ffi.HAS_OBJC) {
+      console.log("hello_chenchen: ");
+      const lib = ffi.DynamicLibrary('/System/Library/Frameworks/Foundation.framework/Versions/Current/Foundation');
+      console.log(lib);
+    }
     // Print out the contents (toString() ends up calling [string description])
-    console.log(string);
-    return availableFormats;
+    // console.log(string);
+    return "cccc";
   }
 }
 
