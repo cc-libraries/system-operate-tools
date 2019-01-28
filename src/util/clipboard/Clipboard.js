@@ -1,5 +1,6 @@
 import { clipboard } from 'electron';
 import { robot } from 'robotjs';
+import { sqlite3 } from 'sqlite3';
 
 class Clipboard {
 
@@ -9,8 +10,10 @@ class Clipboard {
     // console.log("hello_chenchen: " + binding.hello());
     // console.log("hello_chenchen: " + JSON.stringify(availableFormats) + "length: " + availableFormats.length);
 
-    var screenSize = robot.screen.getScreenSize();
-    console.log(JSON.stringify(screenSize));
+    console.log(sqlite3);
+    console.log(robot);
+    // var screenSize = robot.screen.getScreenSize();
+    // console.log(JSON.stringify(screenSize));
 
     return availableFormats;
   }
