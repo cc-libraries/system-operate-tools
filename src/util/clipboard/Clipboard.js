@@ -1,6 +1,5 @@
 import { clipboard } from 'electron';
-// const {binding} = require('./../../../lib/addons.node');
-import { Database } from 'sqlite3';
+import { robot } from 'robotjs';
 
 class Clipboard {
 
@@ -9,30 +8,11 @@ class Clipboard {
     let availableFormats = clipboard.read('CBF_TEXT');
     // console.log("hello_chenchen: " + binding.hello());
     // console.log("hello_chenchen: " + JSON.stringify(availableFormats) + "length: " + availableFormats.length);
-    console.log(Database);
 
-    this.sqlite3Foo();
+    var screenSize = robot.screen.getScreenSize();
+    console.log(JSON.stringify(screenSize));
 
     return availableFormats;
-  }
-  sqlite3Foo() {
-    var db = new Database(':memory:');
-
-    db.serialize(function() {
-      db.run("CREATE TABLE lorem (info TEXT)");
-
-      var stmt = db.prepare("INSERT INTO lorem VALUES (?)");
-      for (var i = 0; i < 10; i++) {
-        stmt.run("Ipsum " + i);
-      }
-      stmt.finalize();
-
-      db.each("SELECT rowid AS id, info FROM lorem", function(err, row) {
-        console.log(row.id + ": " + row.info);
-      });
-    });
-
-    db.close();
   }
 }
 
