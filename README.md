@@ -20,7 +20,7 @@ rebuild for **all platforms**:
 ## install clipboard for electron:
 for **mac**:
 
-`npm install clipboard git+https://github.com/hello-chenchen/node-clipboard-api-adapter.git --build-from-source --runtime=electron --target=4.0.1`
+`npm install clipboard git+https://github.com/hello-chenchen/node-clipboard.git --build-from-source --runtime=electron --target=4.0.1`
 
 ### FIXED:
 Q:`error MSB8020: The build tools for v140 (Platform Toolset = 'v140') cannot be found. To build using the v140 build tools, please install v140 build tools.  Alternatively, you may upgrade to the current Visual Studio tools by selecting the Project menu or right-click the solution, and then selecting "Retarget solution".`
