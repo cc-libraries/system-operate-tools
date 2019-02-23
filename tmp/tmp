@@ -1,0 +1,6 @@
+Uncaught Error: The module '/home/hello-chenchen/Code/system-operate-tools/node_modules/clipboard/build/Release/clipboard.node'
+was compiled against a different Node.js version using
+NODE_MODULE_VERSION 67. This version of Node.js requires
+NODE_MODULE_VERSION 69. Please try re-compiling or re-installing
+the module (for instance, using `npm rebuild` or `npm install`).
+    at process.module.
