@@ -31,10 +31,10 @@ const commonConfig = {
           }
         ]
       },
-      // {  //TODO: maybe need to remove
-      //   test: /\.node$/,
-      //   use: 'node-loader'
-      // },
+      {  //TODO: maybe need to remove
+        test: /\.node$/,
+        use: 'node-loader'
+      },
       { test: /\.css$/, loader: 'style-loader!css-loader!postcss-loader' },
       { test: /\.less$/,
         use: [
