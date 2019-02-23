@@ -9,19 +9,25 @@
         {
             "text": "FIXED",
             "color": "white",
-            "backgroundColor": "blue",
+            "backgroundColor": "green",
             "overviewRulerColor": "white"
         },
         {
             "text": "LINK",
             "color": "white",
-            "backgroundColor": "green",
+            "backgroundColor": "blue",
             "overviewRulerColor": "white"
         },
         {
             "text": "COMPILE",
             "color": "white",
             "backgroundColor": "red",
+            "overviewRulerColor": "white"
+        },
+        {
+            "text": "COMMENT",
+            "color": "white",
+            "backgroundColor": "#996633",
             "overviewRulerColor": "white"
         }
     ],
