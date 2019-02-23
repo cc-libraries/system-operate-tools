@@ -2,22 +2,22 @@
 a series tools for you to operate your system
 
 # notice:
-## install sqlite3 for electron
+## install node-module-xxx for electron
 compile for you electron version. **target** is electron version
 
-for **mac**:
+for **mac**|**linux**:
 
-`npm install robotjs --build-from-source --runtime=electron --target=4.0.1`
+`npm install node-module-xxx --build-from-source --runtime=electron --target=4.0.1`
 
 for **windows**:
 
-`npm install robotjs --build-from-source --runtime=electron --target=4.0.1 --msvs_version=2015`
+`npm install node-module-xxx --build-from-source --runtime=electron --target=4.0.1 --msvs_version=2015`
 
 rebuild for **all platforms**:
 
 `npm rebuild --runtime=electron --target=4.0.1 --disturl=https://atom.io/download/atom-shell --abi=64`
 
-## install clipboard for electron:
+## e.g: install clipboard for electron:
 for **mac**:
 
 `npm install clipboard git+https://github.com/hello-chenchen/node-clipboard.git --build-from-source --runtime=electron --target=4.0.1`
