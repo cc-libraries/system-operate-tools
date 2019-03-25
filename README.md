@@ -13,6 +13,7 @@
 - electron
 - es2015
 - antd
+- react
 - webpack
 - sqlite3 native module compile
 - gyp
