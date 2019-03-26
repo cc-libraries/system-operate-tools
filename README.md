@@ -24,13 +24,6 @@
 - sqlite3 native module compile
 - gyp
 
-## Comments Highlight Style
-  suggestion: [TODO Highlight](https://marketplace.visualstudio.com/items?itemName=wayou.vscode-todo-highlight)
-- TODO orange
-- FIXED green
-- COMPILE red
-- LINK blue
-
 ## Issues
 - **issue list:** https://github.com/hello-chenchen/system-operate-tools/issues
 - The solution of some fixed bugs will be highlight in FIXED
