@@ -9,6 +9,12 @@
 - Mac OS (Current 10.12.6 tested)
 - Windows (Current Windows 10 2016 LTS Version tested)
 
+### Dependence
+This project is depends on [node-clipboard](https://github.com/hello-chenchen/node-clipboard.git)
+
+### The Code Style
+Please Read: [cc-code-style](https://github.com/hello-chenchen/cc-code-style)
+
 ## Used Technologies
 - electron
 - es2015
