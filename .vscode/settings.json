@@ -1,12 +1,31 @@
 {
     "todohighlight.keywords": [
         {
-            "text": "FIXED:",
+            "text": "TODO",
+            "color": "white",
+            "backgroundColor": "orange",
+            "overviewRulerColor": "white"
+        },
+        {
+            "text": "FIXED",
+            "color": "white",
+            "backgroundColor": "green",
+            "overviewRulerColor": "white"
+        },
+        {
+            "text": "LINK",
             "color": "white",
             "backgroundColor": "blue",
             "overviewRulerColor": "white"
+        },
+        {
+            "text": "COMPILE",
+            "color": "white",
+            "backgroundColor": "red",
+            "overviewRulerColor": "white"
         }
     ],
+    "files.trimTrailingWhitespace": true,
     "editor.tabSize": 2,
     "eslint.options": {"configFile": ".eslintrc.js"}
 }

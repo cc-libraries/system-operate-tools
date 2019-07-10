@@ -11,8 +11,8 @@ function createWindow () {
   mainWindow = new BrowserWindow({
     width: 300,
     height: 600,
-    webPreferences: {
-      experimentalFeatures: true
+    webPreferences: {	
+      experimentalFeatures: true	
     }
   });
 
