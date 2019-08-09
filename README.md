@@ -28,7 +28,7 @@ a series tools for you to operate your system
 - **issue list:** https://github.com/hello-chenchen/system-operate-tools/issues
 - The solution of some fixed bugs will be highlight in FIXED
 
-# notice:
+## fixed and shell:
 ## install node-module-xxx for electron
 compile for you electron version. **target** is electron version
 
