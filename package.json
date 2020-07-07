@@ -48,6 +48,6 @@
   },
   "dependencies": {
     "clipboard": "git+https://github.com/hello-chenchen/node-clipboard.git",
-    "electron": "^4.0.1"
+    "electron": "^9.1.0"
   }
 }
