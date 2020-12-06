@@ -1,6 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 const commonConfig = {
   output: {
@@ -19,13 +19,9 @@ const commonConfig = {
     rules: [
       {
         test: /\.jsx?$/,
-        use: [
-          {
-            loader: 'babel-loader'
-          }
-        ]
+        use: ['babel-loader']
       },
-      { test: /\.css$/, loader: 'style-loader!css-loader!postcss-loader' },
+      { test: /\.css$/, use:['style-loader','css-loader','postcss-loader']  },
       { test: /\.less$/,
         use: [
           {
@@ -52,7 +48,7 @@ module.exports = [
       target: "electron-main",
       entry: { main: "./src/main.js" },
       plugins: [
-        new CleanWebpackPlugin(["dist"]),
+        new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
           template: "./public/index.html",
           filename: "index.html",
@@ -68,7 +64,7 @@ module.exports = [
       entry: {
         index: "./src/ui/index.jsx",
         MainWindows: "./src/ui/MainWindows.jsx",
-        Clipboard: "./src/bundles/clipboard/Clipboard.js"
+        Clipboard: "./src/util/clipboard/Clipboard.jsx"
       }
     },
     commonConfig

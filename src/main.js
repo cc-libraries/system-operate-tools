@@ -12,7 +12,8 @@ function createWindow () {
     width: 300,
     height: 600,
     webPreferences: {
-      experimentalFeatures: true
+      experimentalFeatures: true,
+      nodeIntegration: true
     }
   });
 
