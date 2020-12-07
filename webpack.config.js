@@ -9,6 +9,9 @@ const commonConfig = {
     publicPath: '/dist/'
   },
   devtool: 'inline-source-map',
+  devServer: {
+    hot: true
+  },
   node: {
     __dirname: false
   },
@@ -37,6 +40,10 @@ const commonConfig = {
             }
           }
         ]
+      },
+      {
+        test: /.node$/,
+        loader: 'node-loader',
       }
     ]
   }
@@ -64,7 +71,7 @@ module.exports = [
       entry: {
         index: "./src/ui/index.jsx",
         MainWindows: "./src/ui/MainWindows.jsx",
-        Clipboard: "./src/util/clipboard/Clipboard.jsx"
+        Clipboard: "./src/util/clipboard/Clipboard.js"
       }
     },
     commonConfig

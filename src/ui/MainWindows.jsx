@@ -1,14 +1,60 @@
 import React from 'react';
-import { Input } from 'antd';  //FIXED: https://github.com/ant-design/ant-design/issues/4618#issuecomment-309258697
+import { Select } from 'antd';  //FIXED: https://github.com/ant-design/ant-design/issues/4618#issuecomment-309258697
 import 'antd/dist/antd.css';
-import Clipboard from '../util/clipboard/Clipboard.jsx';
+import { readText } from '../util/clipboard/Clipboard.js';
+
 class MainWindows extends React.Component {
-  render() {
-    let Search = Input.Search;
-    return <div>
-      <Search placeholder="input search text" enterButton="Search" size="large" onSearch={value => Clipboard.readBuffer(value)} />
-    </div>;
-  }
+    constructor(props) {
+        super(props);
+        this.lastCBText = '';
+        this.cbTextArray = [];
+        this.state = {
+            setProps: new Set(),
+            cbTextArray: []
+        };
+    }
+
+    render() {
+        return <div>
+            <Select style={{ width: '100%' }} showSearch={ true } placeholder="input search text" options={ this.state.cbTextArray } />
+        </div>;
+    }
+
+    componentDidMount () {
+        this.timerID = setInterval(
+            () => this.listenCBEvent(),
+            1000
+        );
+    }
+
+    listenCBEvent() {
+        let cbText = readText();
+        if(cbText == this.lastCBText) {
+            return;
+        }
+
+        let setTemp = this.state.setProps;
+        if(setTemp.has(cbText)) {
+            setTemp.delete( cbText );
+        }
+        setTemp.add( cbText );
+
+        this.setState({
+            setProps: setTemp
+            }
+        );
+
+        let array = [];
+        setTemp.forEach((value) => {
+            array.push({ value });
+        })
+
+
+        this.setState({
+            cbTextArray: array
+            }
+        );
+    }
 }
 
 export default MainWindows;

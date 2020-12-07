@@ -1,34 +1,39 @@
 // Modules to control application life and create native browser window
-const {app, BrowserWindow, clipboard} = require('electron');
+const { app, BrowserWindow } = require('electron');
+
 let mime = require('mime-types');
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow;
 
-function createWindow () {
-  // Create the browser window.
-  mainWindow = new BrowserWindow({
-    width: 300,
-    height: 600,
-    webPreferences: {
-      experimentalFeatures: true,
-      nodeIntegration: true
-    }
-  });
+try {
+    require('electron-reloader')(module)
+} catch (_) { }
 
-  // and load the index.html of the app.
-  let htmlFile = __dirname + '/index.html';
-  mainWindow.loadFile(htmlFile);
-
-  //Open the DevTools
-  mainWindow.webContents.openDevTools();
-
-  // Emitted when the window is closed.
-  mainWindow.on('closed',
-    function () {
-      mainWindow = null;
+function createWindow() {
+    // Create the browser window.
+    mainWindow = new BrowserWindow({
+        width: 700,
+        height: 600,
+        webPreferences: {
+            experimentalFeatures: true,
+            nodeIntegration: true
+        }
     });
+
+    // and load the index.html of the app.
+    let htmlFile = __dirname + '/index.html';
+    mainWindow.loadFile(htmlFile);
+
+    //Open the DevTools
+    mainWindow.webContents.openDevTools();
+
+    // Emitted when the window is closed.
+    mainWindow.on('closed',
+        function () {
+            mainWindow = null;
+        });
 }
 
 // This method will be called when Electron has finished
@@ -38,15 +43,15 @@ app.on('ready', createWindow);
 
 // Quit when all windows are closed.
 app.on('window-all-closed', function () {
-  app.quit();
+    app.quit();
 });
 
 app.on('activate', function () {
-  // On macOS it's common to re-create a window in the app when the
-  // dock icon is clicked and there are no other windows open.
-  if (mainWindow === null) {
-    createWindow();
-  }
+    // On macOS it's common to re-create a window in the app when the
+    // dock icon is clicked and there are no other windows open.
+    if (mainWindow === null) {
+        createWindow();
+    }
 });
 
 // In this file you can include the rest of your app's specific main process

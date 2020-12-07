@@ -7,6 +7,5 @@
             "overviewRulerColor": "white"
         }
     ],
-    "editor.tabSize": 2,
     "eslint.options": {"configFile": ".eslintrc.js"}
 }
