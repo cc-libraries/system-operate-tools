@@ -1,6 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+// const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 const commonConfig = {
   output: {
@@ -9,9 +9,6 @@ const commonConfig = {
     publicPath: '/dist/'
   },
   devtool: 'inline-source-map',
-  devServer: {
-    hot: true
-  },
   node: {
     __dirname: false
   },
@@ -49,13 +46,27 @@ const commonConfig = {
   }
 };
 
+const startServer = {
+  devServer: {
+    contentBase: path.join(__dirname, 'dist'),
+    compress: true,
+    port: 3000,
+    hot: true
+  },
+};
+
 module.exports = [
+  // Object.assign(
+  //   {
+  //     entry: { main: "./dist/index.js" }
+  //   },
+  //   startServer
+  // ),
   Object.assign(
     {
       target: "electron-main",
       entry: { main: "./src/main.js" },
       plugins: [
-        new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
           template: "./public/index.html",
           filename: "index.html",

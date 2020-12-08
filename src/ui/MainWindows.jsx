@@ -1,7 +1,8 @@
 import React from 'react';
 import { Select } from 'antd';  //FIXED: https://github.com/ant-design/ant-design/issues/4618#issuecomment-309258697
 import 'antd/dist/antd.css';
-import { readText } from '../util/clipboard/Clipboard.js';
+import { readText } from '../util/clipboard/Clipboard';
+import { demo } from '../util/sqlite3';
 
 class MainWindows extends React.Component {
     constructor(props) {
@@ -12,6 +13,7 @@ class MainWindows extends React.Component {
             setProps: new Set(),
             cbTextArray: []
         };
+        demo();
     }
 
     render() {
