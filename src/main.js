@@ -25,6 +25,7 @@ function createWindow() {
     // and load the index.html of the app.
     let htmlFile = __dirname + '/index.html';
     mainWindow.loadFile(htmlFile);
+    // mainWindow.loadURL('http://localhost:3000');
 
     //Open the DevTools
     mainWindow.webContents.openDevTools();
@@ -56,3 +57,4 @@ app.on('activate', function () {
 
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and require them here.
+// app.allowRendererProcessReuse = false;   //FIXED: https://github.com/hello-chenchen/system-operate-tools/issues/8

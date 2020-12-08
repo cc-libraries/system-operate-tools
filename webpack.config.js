@@ -1,17 +1,25 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+// const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const webpack = require('webpack');
 
 const commonConfig = {
+  watch: true,
+  watchOptions: {
+    ignored: /node_modules/
+  },
+  resolve: {
+    extensions: ['.js']
+  },
+  externals: {
+    sqlite3: 'commonjs sqlite3',
+  },
   output: {
     filename: '[name].js',
     path: path.resolve(__dirname, 'dist'),
     publicPath: '/dist/'
   },
-  devtool: 'inline-source-map',
-  devServer: {
-    hot: true
-  },
+  // devtool: 'inline-source-map',
   node: {
     __dirname: false
   },
@@ -42,20 +50,33 @@ const commonConfig = {
         ]
       },
       {
-        test: /.node$/,
+        test: /\.node$/,
         loader: 'node-loader',
       }
     ]
   }
 };
 
+const startServer = {
+  devServer: {
+    contentBase: path.join(__dirname, 'dist'),
+    port: 3000,
+    hot: true
+  },
+};
+
 module.exports = [
+  // Object.assign(
+  //   {
+  //     entry: { main: "./dist/index.js" }
+  //   },
+  //   startServer
+  // ),
   Object.assign(
     {
       target: "electron-main",
       entry: { main: "./src/main.js" },
       plugins: [
-        new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
           template: "./public/index.html",
           filename: "index.html",

@@ -4,6 +4,7 @@
   "description": "based on electron and webpack",
   "scripts": {
     "start": "electron ./dist/main.js",
+    "startserver": "webpack serve",
     "build": "webpack -c webpack.config.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -22,27 +23,36 @@
     "@babel/preset-env": "^7.12.7",
     "@babel/preset-react": "^7.12.7",
     "antd": "^4.9.1",
+    "aws-sdk": "^2.806.0",
     "babel-eslint": "^10.1.0",
     "babel-loader": "^8.2.2",
     "babel-plugin-import": "^1.13.3",
     "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^5.0.1",
     "electron": "^11.0.3",
-    "electron-reloader": "^1.1.0",
+    "electron-rebuild": "^2.3.4",
     "eslint": "^7.15.0",
     "html-jsx-loader": "^0.1.17",
     "html-webpack-plugin": "^4.5.0",
+    "json-loader": "^0.5.7",
     "jsx-loader": "^0.13.2",
     "less": "^3.12.2",
     "less-loader": "^7.1.0",
     "mime-types": "^2.1.27",
+    "node": "^11.6.0",
+    "node-gyp": "^7.1.2",
     "node-loader": "^1.0.2",
+    "octal-number-loader": "^0.1.4",
     "postcss-loader": "^4.1.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "style-loader": "^2.0.0",
     "webpack": "^5.10.0",
-    "webpack-cli": "^4.2.0"
+    "webpack-cli": "^4.2.0",
+    "webpack-dev-server": "^3.11.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "clipboard": "git+https://github.com/hello-chenchen/node-clipboard.git",
+    "sqlite3": "^5.0.0"
+  }
 }
