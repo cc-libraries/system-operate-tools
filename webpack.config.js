@@ -19,7 +19,7 @@ const commonConfig = {
     path: path.resolve(__dirname, 'dist'),
     publicPath: '/dist/'
   },
-  // devtool: 'inline-source-map',
+  devtool: 'inline-source-map',
   node: {
     __dirname: false
   },

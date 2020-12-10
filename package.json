@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hello-chenchen/electron-webpack.git"
+    "url": "git+https://github.com/cc-libraries/electron-webpack.git"
   },
   "author": "hello_chenchen",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/hello-chenchen/electron-webpack/issues"
+    "url": "https://github.com/cc-libraries/electron-webpack/issues"
   },
-  "homepage": "https://github.com/hello-chenchen/electron-webpack#readme",
+  "homepage": "https://github.com/cc-libraries/electron-webpack#readme",
   "devDependencies": {
     "@babel/core": "^7.12.9",
     "@babel/preset-env": "^7.12.7",
@@ -52,7 +52,6 @@
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
-    "clipboard": "git+https://github.com/hello-chenchen/node-clipboard.git",
     "sqlite3": "^5.0.0"
   }
 }

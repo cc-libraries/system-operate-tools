@@ -1,8 +1,22 @@
 const { clipboard } = require('electron');
 
 export function readText() {
-    console.log('Clipboard readText');
-    let availableFormats = clipboard.readText();
-    // console.log(availableFormats);
-    return availableFormats;
+    let result = {};
+    result.content = clipboard.readText();
+    result.time = +new Date();
+    result.id = hashCode(result.content);
+    return result;
+}
+
+function hashCode (str){
+    var hash = 0;
+    if(str.length == 0) return hash;
+
+    for(let i = 0; i < str.length; i++) {
+        let char = str.charCodeAt(i);
+        hash = ((hash<<5)-hash) + char;
+        hash = hash & hash; // Convert to 32bit integer
+    }
+
+    return hash;
 }
