@@ -3,6 +3,12 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 // const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 const commonConfig = {
+  resolve: {
+    extensions: ['.js']
+  },
+  externals: {
+    sqlite3: 'commonjs sqlite3',
+  },
   output: {
     filename: '[name].js',
     path: path.resolve(__dirname, 'dist'),
@@ -39,7 +45,7 @@ const commonConfig = {
         ]
       },
       {
-        test: /.node$/,
+        test: /\.node$/,
         loader: 'node-loader',
       }
     ]

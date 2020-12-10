@@ -1,4 +1,10 @@
 export function demo () {
+    // var clipboard11 = require('clipboard');  //TODO: supported
+    // var n = clipboard11.foo();
+    // console.log('===111===');
+    // console.log(n);
+    // console.log('===222===');
+
     var sqlite3 = require('sqlite3').verbose();
     var db = new sqlite3.Database(':memory:');
 
