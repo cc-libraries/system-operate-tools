@@ -1,8 +1,13 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 // const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const webpack = require('webpack');
 
 const commonConfig = {
+  watch: true,
+  watchOptions: {
+    ignored: /node_modules/
+  },
   resolve: {
     extensions: ['.js']
   },
@@ -14,7 +19,7 @@ const commonConfig = {
     path: path.resolve(__dirname, 'dist'),
     publicPath: '/dist/'
   },
-  devtool: 'inline-source-map',
+  // devtool: 'inline-source-map',
   node: {
     __dirname: false
   },
@@ -55,7 +60,6 @@ const commonConfig = {
 const startServer = {
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
-    compress: true,
     port: 3000,
     hot: true
   },
