@@ -52,7 +52,6 @@
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
-    "clipboard": "git+https://github.com/cc-libraries/node-clipboard.git",
     "sqlite3": "^5.0.0"
   }
 }
