@@ -5,7 +5,7 @@ export function demo () {
     // console.log(n);
     // console.log('===222===');
 
-    var sqlite3 = require('sqlite3').verbose();
+    var sqlite3 = require('sqlite3');
     var db = new sqlite3.Database(':memory:');
 
     db.serialize(function() {
@@ -24,3 +24,16 @@ export function demo () {
 
     db.close();
 }
+
+var DataBase = /** @class */ (function () {
+    function DataBase() {
+        this.sqlite3 = require('sqlite3');
+        this.database = new this.sqlite3.Database(':memory:');
+    }
+
+    DataBase.prototype.instance = function (dataBaseName) {
+        this.database.serialize(function() {});
+    };
+
+    return DataBase;
+}());
