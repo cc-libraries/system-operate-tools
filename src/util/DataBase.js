@@ -3,7 +3,8 @@ exports.DataBase = void 0;
 
 var DataBase = /** @class */ (function () {
     function DataBase(filePath = ':memory:') {
-        this.database = new sqlite3.Database(filePath, sqlite3.OPEN_READWRITE, (error) => {
+        console.log(filePath);
+        this.database = new sqlite3.Database(filePath, (error) => {
             if (null != error) {
                 console.error('Could not connect to database' + error);
             } else {
