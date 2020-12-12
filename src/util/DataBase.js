@@ -28,7 +28,7 @@ var DataBase = /** @class */ (function () {
                 }
             });
 
-            this.database.each("SELECT * FROM cc_clipboard ORDER BY cc_time desc limit 10", callback);
+            this.database.each("SELECT * FROM cc_clipboard ORDER BY cc_time desc", callback);   //TODO:  limit 20
         });
     }
 
@@ -47,18 +47,27 @@ var DataBase = /** @class */ (function () {
         statement.finalize(callback);
     };
 
-    DataBase.prototype.update = function (items, callback) {
-        let updateString = `UPDATE cc_clipboard SET ?`;
-        var statement = this.database.prepare(updateString, callback);
-        items.each((item) => {
-            statement.run('cc_time = ' + item.time + ', cc_content = ' + item.content + ' WHERE cc_id = ' + item.id, callback);
-        }, callback);
-        statement.finalize(callback);
+    DataBase.prototype.update = function (item) {
+        let updateString = 'UPDATE cc_clipboard SET cc_time = ?, cc_content = ? WHERE cc_id = ?';
+        var statement = this.database.run(updateString, [item.time, item.content, item.id]);
     }
 
-    DataBase.prototype.select = function (content, callback) {
-        let selectString = `SELECT * FROM cc_clipboard WHERE cc_content LIKE '%` + content + `' ORDER BY cc_time DESC LIMIT 10`;
-        this.database.each(selectString, callback);
+    DataBase.prototype.getTop20 = function(callback) {
+        this.database.each("SELECT * FROM cc_clipboard ORDER BY cc_time desc limit 20", callback);
+    }
+
+    // DataBase.prototype.update = function (items, callback) {
+    //     let updateString = `UPDATE cc_clipboard SET ?`;
+    //     var statement = this.database.prepare(updateString, callback);
+    //     items.each((item) => {
+    //         statement.run('cc_time = ' + item.time + ', cc_content = ' + item.content + ' WHERE cc_id = ' + item.id, callback);
+    //     }, callback);
+    //     statement.finalize(callback);
+    // }
+
+    DataBase.prototype.filter = function (content, callback) {
+        let filterString = `SELECT * FROM cc_clipboard WHERE cc_content LIKE '%` + content + `' ORDER BY cc_time DESC LIMIT 10`;
+        this.database.each(filterString, callback);
     }
 
     DataBase.prototype.close = function () {

@@ -1,8 +1,9 @@
 const { clipboard } = require('electron');
 
 export function readText() {
-    console.log('Clipboard readText');
-    let availableFormats = clipboard.readText();
+    let result = {};
+    result.content = clipboard.readText();
+    result.time = +new Date();
     // console.log(availableFormats);
-    return availableFormats;
+    return result;
 }

@@ -9,15 +9,29 @@ class MainWindows extends React.Component {
         super(props);
         this.lastCBText = '';
         this.cbTextArray = [];
+        this.setProps = new Set(),
         this.state = {
-            setProps: new Set(),
             cbTextArray: []
         };
+
         this.database = new DataBase('./cc_clipboard.db');
     }
 
     initHandle() {
-        this.database.init();
+        this.database.init(handleSeachResult);
+    }
+
+    handleSeachResult(error, item) {
+        let array = [];
+        let value = item.cc_content;
+        if(null == error) {
+            array.push({ value });
+        }
+
+        this.setState({
+            cbTextArray: array
+            }
+        );
     }
 
     render() {
@@ -34,32 +48,21 @@ class MainWindows extends React.Component {
     }
 
     listenCBEvent() {
-        let cbText = readText();
-        if(cbText == this.lastCBText) {
+        let cbContext = readText();
+        if(cbContext.content == this.lastCBText) {
             return;
         }
+        this.lastCBText = cbContext.content;
 
-        let setTemp = this.state.setProps;
-        if(setTemp.has(cbText)) {
-            setTemp.delete( cbText );
+        let setTemp = this.setProps;
+        if(setTemp.has(cbContext.content)) {
+            this.database.update(cbContext);
+            setTemp.delete( cbContext.content );
         }
-        setTemp.add( cbText );
-
-        this.setState({
-            setProps: setTemp
-            }
-        );
+        setTemp.add( cbContext.content );
 
         let array = [];
-        setTemp.forEach((value) => {
-            array.push({ value });
-        })
-
-
-        this.setState({
-            cbTextArray: array
-            }
-        );
+        this.database.getTop20(handleSeachResult);
     }
 }
 
