@@ -2,7 +2,7 @@ import React from 'react';
 import { Select } from 'antd';  //FIXED: https://github.com/ant-design/ant-design/issues/4618#issuecomment-309258697
 import 'antd/dist/antd.css';
 import { readText } from '../util/clipboard/Clipboard';
-import { demo } from '../util/sqlite3';
+import { DataBase } from '../util/DataBase';
 
 class MainWindows extends React.Component {
     constructor(props) {
@@ -13,7 +13,11 @@ class MainWindows extends React.Component {
             setProps: new Set(),
             cbTextArray: []
         };
-        demo();
+        this.database = new DataBase('./cc_clipboard.db');
+    }
+
+    initHandle() {
+        this.database.init();
     }
 
     render() {
