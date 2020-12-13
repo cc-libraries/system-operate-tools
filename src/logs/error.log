@@ -1,0 +1,6 @@
+
+> electron-webpack@0.0.1 start D:\code\system-operate-tools
+> electron ./dist/main.js
+
+
+(node:9420) electron: The default of contextIsolation is deprecated and will be changing from false to true in a future release of Electron.  See https://github.com/electron/electron/issues/23506 for more information

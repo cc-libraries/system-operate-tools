@@ -13,25 +13,30 @@ class MainWindows extends React.Component {
         this.state = {
             cbTextArray: []
         };
+    }
 
+    async initHandle() {
         this.database = new DataBase('./cc_clipboard.db');
+
+        let items = await this.database.init();
+        this.reRenderList(items);
     }
 
-    initHandle() {
-        this.database.init(handleSeachResult);
-    }
-
-    handleSeachResult(error, item) {
+    reRenderList(items = []) {
+        console.log('reRenderList start:');
         let array = [];
-        let value = item.cc_content;
-        if(null == error) {
+        items.forEach((item, index) => {
+            this.setProps.add(item.cc_id);
+            let value = item.cc_content;
             array.push({ value });
-        }
+        });
 
         this.setState({
             cbTextArray: array
             }
         );
+
+        console.log('reRenderList end.');
     }
 
     render() {
@@ -40,29 +45,37 @@ class MainWindows extends React.Component {
         </div>;
     }
 
-    componentDidMount () {
+    async componentDidMount () {
+        this.initHandle();
         this.timerID = setInterval(
             () => this.listenCBEvent(),
             1000
         );
     }
 
-    listenCBEvent() {
+    async listenCBEvent() {
+        console.log('listenCBEvent start:');
         let cbContext = readText();
         if(cbContext.content == this.lastCBText) {
+            console.log('listenCBEvent same to the latest!');
             return;
         }
         this.lastCBText = cbContext.content;
 
-        let setTemp = this.setProps;
-        if(setTemp.has(cbContext.content)) {
+        if(this.setProps.has(cbContext.id)) {
+            // console.log('listenCBEvent update context id: ' + cbContext.id + ' time: ' + cbContext.time + ' content: ' + cbContext.content);
             this.database.update(cbContext);
-            setTemp.delete( cbContext.content );
+            this.setProps.delete( cbContext.id );
+        } else {
+            // console.log('listenCBEvent insert context id: ' + cbContext.id + ' time: ' + cbContext.time + ' content: ' + cbContext.content);
+            this.database.insert(cbContext);
         }
-        setTemp.add( cbContext.content );
 
-        let array = [];
-        this.database.getTop20(handleSeachResult);
+        this.setProps.add(cbContext.id);
+
+        let items = await this.database.getTop20();
+        this.reRenderList(items);
+        console.log('listenCBEvent end.');
     }
 }
 
