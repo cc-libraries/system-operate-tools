@@ -1,5 +1,5 @@
 import React from 'react';
-import { Select } from 'antd';  //FIXED: https://github.com/ant-design/ant-design/issues/4618#issuecomment-309258697
+import { Select, List } from 'antd';  //FIXED: https://github.com/ant-design/ant-design/issues/4618#issuecomment-309258697
 import 'antd/dist/antd.css';
 import { readText } from '../util/clipboard/Clipboard';
 import { DataBase } from '../util/DataBase';
@@ -40,9 +40,22 @@ class MainWindows extends React.Component {
     }
 
     render() {
-        return <div>
-            <Select style={{ width: '100%' }} showSearch={ true } placeholder="input search text" options={ this.state.cbTextArray } />
-        </div>;
+        return (
+            <List
+                className="loadmore-list"
+                itemLayout="horizontal"
+                dataSource={this.state.cbTextArray}
+                renderItem={item => (
+                    <List.Item
+                        actions={[<a key="list-loadmore-edit">delete</a>]}
+                    >
+                        <List.Item.Meta
+                            title={item.value}
+                        />
+                    </List.Item>
+                )}
+            />
+        );
     }
 
     async componentDidMount () {
