@@ -26,7 +26,10 @@ module.exports = {
             "error",
             "always"
         ],
-        'no-console': 'off',
-        "no-unused-vars": 0
+        "no-unused-vars": 0,
+        "no-console": process.env.NODE_ENV === 'production' ? 'warn' : 'off',
+        "no-debugger": process.env.NODE_ENV === 'production' ? 'warn' : 'off',
+        "comma-dangle": 'always',
+        "no-unused-vars": ['all']
     }
 };

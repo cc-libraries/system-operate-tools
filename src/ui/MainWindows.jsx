@@ -9,7 +9,7 @@ class MainWindows extends React.Component {
         super(props);
         this.lastCBText = '';
         this.cbTextArray = [];
-        this.setProps = new Set(),
+        this.setProps = new Set();
         this.state = {
             cbTextArray: []
         };
@@ -33,8 +33,7 @@ class MainWindows extends React.Component {
 
         this.setState({
             cbTextArray: array
-            }
-        );
+            });
 
         console.log('reRenderList end.');
     }
