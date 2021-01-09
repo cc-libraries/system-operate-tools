@@ -1,7 +1,7 @@
 import React from 'react';
 import { Input, List } from 'antd';  //FIXED: https://github.com/ant-design/ant-design/issues/4618#issuecomment-309258697
 import 'antd/dist/antd.css';
-import { readText } from '../util/clipboard/Clipboard';
+import { readText, writeText } from '../util/clipboard/Clipboard';
 import { DataBase } from '../util/DataBase';
 import '../scss/common.scss';
 
@@ -11,6 +11,7 @@ class MainWindows extends React.Component {
         this.lastCBText = '';
         this.setProps = new Set();
         this.state = {
+            focusIndex: -1,
             cbTextArray: []
         };
         this.database = new DataBase('./clipboard.db');
@@ -44,16 +45,15 @@ class MainWindows extends React.Component {
                     placeholder="search"
                     ref={this.searchInput}
                     onChange={e =>  this.searchClip(e.target.value)}
-                    onKeyUp={this.inputKeyUp.bind(this)}
+                    onKeyDown={this.inputKeyDown.bind(this)}
                 />
                 <List
-                    className="loadmore-list"
                     itemLayout="horizontal"
                     dataSource={this.state.cbTextArray}
-                    onKeyUp={this.listKeyUp.bind(this)}
-                    renderItem={item => (
+                    renderItem={(item, index) => (
                         <List.Item
-                        actions={[<a href="#" onClick={() => this.deleteClipItem(item.id)}>delete</a>]}
+                            className={this.state.focusIndex == index ? 'selected-item' : ''}
+                            actions={[<a href="#" onClick={() => this.deleteClipItem(item.id)}>delete</a>]}
                         >
                             <List.Item.Meta
                                 title={item.content}
@@ -65,14 +65,23 @@ class MainWindows extends React.Component {
         );
     }
 
-    inputKeyUp (e) {
+    inputKeyDown (e) {
         console.log('inputKeyUp: ');
         console.log(e);
-    }
+        let focusIndex = this.state.focusIndex;
+        if(e.keyCode == 40 && focusIndex < this.state.cbTextArray.length - 1) {
+            focusIndex++;
+        } else if(e.keyCode == 38 && focusIndex > -1) {
+            focusIndex--;
+        } else if(e.keyCode == 13 && focusIndex != -1) {
+            let cbContext = this.state.cbTextArray[focusIndex];
+            writeText(cbContext.content);
+            focusIndex = 0;
+        }
 
-    listKeyUp (e) {
-        console.log('listKeyUp: ');
-        console.log(e);
+        this.setState({
+            focusIndex: focusIndex
+        });
     }
 
     async componentDidMount () {

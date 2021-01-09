@@ -14,8 +14,8 @@ try {
 function createWindow() {
     // Create the browser window.
     mainWindow = new BrowserWindow({
-        width: 700,
-        height: 600,
+        width: 300,
+        height: 500,
         webPreferences: {
             experimentalFeatures: true,
             nodeIntegration: true,
@@ -29,7 +29,7 @@ function createWindow() {
     // mainWindow.loadURL('http://localhost:3000');
 
     //Open the DevTools
-    mainWindow.webContents.openDevTools();
+    // mainWindow.webContents.openDevTools();
 
     // Emitted when the window is closed.
     mainWindow.on('closed',

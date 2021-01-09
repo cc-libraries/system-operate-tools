@@ -1,5 +1,10 @@
 $margin-base: 10px;
+$background-gray: gray;
 
 .main-windows {
     margin: $margin-base;
+}
+
+.selected-item {
+    background-color: $background-gray;
 }

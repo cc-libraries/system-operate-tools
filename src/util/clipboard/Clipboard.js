@@ -8,6 +8,10 @@ export function readText() {
     return result;
 }
 
+export function writeText(content) {
+    clipboard.writeText(content);
+}
+
 function hashCode (str){
     var hash = 0;
     if(str.length == 0) return hash;
