@@ -73,10 +73,10 @@ var DataBase = /** @class */ (function () {
         // });
     }
 
-    DataBase.prototype.getTop20 = function() {
+    DataBase.prototype.getAll = function() {
         return new Promise((resolve, reject) => {
             this.database.all("SELECT * FROM clipboard ORDER BY time desc", (error, result) => {  //TODO: limit 20
-                console.log('Database getTop20: ');
+                console.log('Database getAll: ');
                 if(error) {
                     console.log('select all error: ' + error);
                     return reject(error);

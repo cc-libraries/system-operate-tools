@@ -9,12 +9,12 @@ class MainWindows extends React.Component {
     constructor(props) {
         super(props);
         this.lastCBText = '';
-        this.cbTextArray = [];
         this.setProps = new Set();
         this.state = {
             cbTextArray: []
         };
         this.database = new DataBase('./clipboard.db');
+        this.searchInput = React.createRef();
     }
 
     async initHandle() {
@@ -24,38 +24,39 @@ class MainWindows extends React.Component {
 
     reRenderList(items = []) {
         console.log('reRenderList start:');
-        let array = [];
-        items.forEach((item, index) => {
+        items.forEach((item) => {
             this.setProps.add(item.id);
-            let value = item.content;
-            let id = item.id;
-            array.push({ value, id });
         });
 
+        this.cbTextArray = items;
         this.setState({
-            cbTextArray: array
-            });
+            cbTextArray: items
+        });
 
         console.log('reRenderList end.');
     }
 
     render() {
         return (
+            //TODO: Vlist from react-virtualized is better to handle massive data, for more info: https://ant.design/components/list
             <div class="main-windows">
                 <Input
                     placeholder="search"
+                    ref={this.searchInput}
                     onChange={e =>  this.searchClip(e.target.value)}
+                    onKeyUp={this.inputKeyUp.bind(this)}
                 />
                 <List
                     className="loadmore-list"
                     itemLayout="horizontal"
                     dataSource={this.state.cbTextArray}
-                    renderItem={(item, index) => (
+                    onKeyUp={this.listKeyUp.bind(this)}
+                    renderItem={item => (
                         <List.Item
-                        actions={[<a href="#" onClick={() =>this.deleteClipItem(item.id, item.value, index)}>delete</a>]}
+                        actions={[<a href="#" onClick={() => this.deleteClipItem(item.id)}>delete</a>]}
                         >
                             <List.Item.Meta
-                                title={item.value}
+                                title={item.content}
                             />
                         </List.Item>
                     )}
@@ -64,26 +65,39 @@ class MainWindows extends React.Component {
         );
     }
 
+    inputKeyUp (e) {
+        console.log('inputKeyUp: ');
+        console.log(e);
+    }
+
+    listKeyUp (e) {
+        console.log('listKeyUp: ');
+        console.log(e);
+    }
+
     async componentDidMount () {
         this.initHandle();
         this.timerID = setInterval(
             () => this.listenCBEvent(),
             1000
         );
+        this.searchInput.current.focus();
     }
 
     async listenCBEvent() {
         let cbContext = readText();
         if(cbContext.content == this.lastCBText) {
-            // console.log('listenCBEvent same to the latest!');
+            console.log('listenCBEvent same to the latest!');
             return;
         }
         this.lastCBText = cbContext.content;
 
+        let array = this.state.cbTextArray;
         if(this.setProps.has(cbContext.id)) {
             // console.log('listenCBEvent update context id: ' + cbContext.id + ' time: ' + cbContext.time + ' content: ' + cbContext.content);
             this.database.update(cbContext);
             this.setProps.delete(cbContext.id);
+            array = array.filter(element => element.id != cbContext.id);
         } else {
             // console.log('listenCBEvent insert context id: ' + cbContext.id + ' time: ' + cbContext.time + ' content: ' + cbContext.content);
             this.database.insert(cbContext);
@@ -91,8 +105,10 @@ class MainWindows extends React.Component {
 
         this.setProps.add(cbContext.id);
 
-        let items = await this.database.getTop20();
-        this.reRenderList(items);
+        array.unshift(cbContext);
+        this.setState({
+            cbTextArray: array
+        });
     }
 
     async searchClip (searchIput) {
@@ -100,22 +116,13 @@ class MainWindows extends React.Component {
         this.reRenderList(items);
     }
 
-    deleteClipItem (id, value, index) {
-        let array = [];
-        this.state.cbTextArray.forEach((item) => {
-            if(id == item.id) {
-                this.setProps.delete(id);
-                this.database.delete(id);
-            } else {
-                let value = item.value;
-                let id = item.id;
-                array.push({ value, id });
-            }
-        });
+    deleteClipItem (id) {
+        this.database.delete(id);
+        this.setProps.delete(id);
 
         this.setState({
-            cbTextArray: array
-            });
+            cbTextArray: this.state.cbTextArray.filter(element => element.id != id)
+        });
     }
 }
 
