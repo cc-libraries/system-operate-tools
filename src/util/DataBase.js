@@ -50,7 +50,7 @@ var DataBase = /** @class */ (function () {
         }
     }
 
-    DataBase.prototype.insert = function (item, callback) {
+    DataBase.prototype.insert = function (item) {
         // this.database.serialize(() => {
             let insertString = `INSERT INTO clipboard (id, time, content) VALUES (?, ?, ?)`;
             this.database.run(insertString, [item.id, item.time, item.content]);
@@ -73,9 +73,8 @@ var DataBase = /** @class */ (function () {
         // });
     }
 
-    DataBase.prototype.getTop20 = function(callback) {
+    DataBase.prototype.getTop20 = function() {
         return new Promise((resolve, reject) => {
-            // this.database.serialize(() => {
             this.database.all("SELECT * FROM clipboard ORDER BY time desc", (error, result) => {  //TODO: limit 20
                 console.log('Database getTop20: ');
                 if(error) {
@@ -85,7 +84,6 @@ var DataBase = /** @class */ (function () {
 
                 return resolve(result);
             });
-            // });
         });
     }
 
@@ -98,9 +96,26 @@ var DataBase = /** @class */ (function () {
         statement.finalize(callback);
     }
 
-    DataBase.prototype.filter = function (content, callback) {
-        let filterString = `SELECT * FROM clipboard WHERE content LIKE '%` + content + `' ORDER BY time DESC LIMIT 10`;
-        this.database.each(filterString, callback);
+    DataBase.prototype.filter = function (content) {
+        let filterString = `SELECT * FROM clipboard WHERE content LIKE '%` + content + `%' ORDER BY time desc`;
+        return new Promise((resolve, reject) => {
+            this.database.all(filterString, (error, result) => {
+                if(error) {
+                    console.log('filter all error: ' + error);
+                    return reject(error);
+                }
+
+                return resolve(result);
+            });
+        });
+    }
+
+    DataBase.prototype.delete = function (id) {
+        let deleteString = 'DELETE FROM clipboard WHERE id = ?';
+        this.database.run(deleteString, [id], (error) => {
+            console.log('delete error: ');
+            console.log(error);
+        });
     }
 
     DataBase.prototype.close = function () {
