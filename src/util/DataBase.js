@@ -112,9 +112,11 @@ var DataBase = /** @class */ (function () {
 
     DataBase.prototype.delete = function (id) {
         let deleteString = 'DELETE FROM clipboard WHERE id = ?';
-        this.database.run(deleteString, [id], (error) => {
-            console.log('delete error: ');
-            console.log(error);
+        this.database.run(deleteString, [id], (result, error) => {
+            if(null != result) {
+                console.log('delete error: ');
+                console.log(error);
+            }
         });
     }
 

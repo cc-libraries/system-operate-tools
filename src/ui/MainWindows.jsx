@@ -43,8 +43,8 @@ class MainWindows extends React.Component {
         return (
             <div class="main-windows">
                 <Input
-                    placeholder="Basic usage"
-                    onChange={e =>  this.searchClip(e.target.value) }
+                    placeholder="search"
+                    onChange={e =>  this.searchClip(e.target.value)}
                 />
                 <List
                     className="loadmore-list"
