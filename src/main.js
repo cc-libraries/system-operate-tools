@@ -1,11 +1,13 @@
 // Modules to control application life and create native browser window
-const { app, BrowserWindow } = require('electron');
+const { app, BrowserWindow, Menu, Tray, globalShortcut } = require('electron');
 
 let mime = require('mime-types');
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow;
+
+let showOrHide = true;
 
 try {
     require('electron-reloader')(module)
@@ -14,14 +16,31 @@ try {
 function createWindow() {
     // Create the browser window.
     mainWindow = new BrowserWindow({
-        width: 300,
-        height: 500,
+        width: 700,
+        height: 540,
+        center: true,
         webPreferences: {
             experimentalFeatures: true,
             nodeIntegration: true,
             contextIsolation: false
-        }
+        },
+        alwaysOnTop: true,
+        frame: false
     });
+
+    let trayIcon = __dirname + '/icon.ico';
+    appTray = new Tray(trayIcon);
+
+    const contextMenu = Menu.buildFromTemplate([
+        {
+            label: 'Quit',
+            click: function(){
+                app.quit();
+            }
+        }
+    ]);
+
+    appTray.setContextMenu(contextMenu);
 
     // and load the index.html of the app.
     let htmlFile = __dirname + '/index.html';
@@ -35,7 +54,11 @@ function createWindow() {
     mainWindow.on('closed',
         function () {
             mainWindow = null;
-        });
+    });
+
+    // mainWindow.on('show', (event) => {
+    //     mainWindow.focus();
+    // });
 }
 
 // This method will be called when Electron has finished
@@ -54,6 +77,26 @@ app.on('activate', function () {
     if (mainWindow === null) {
         createWindow();
     }
+});
+
+app.whenReady().then(() => {
+    // Register a 'CommandOrControl+X' shortcut listener.
+    const hide = globalShortcut.register('CommandOrControl+`', () => {
+        if(showOrHide) {
+            mainWindow.hide();
+            showOrHide = false;
+        } else {
+            mainWindow.show();
+            showOrHide = true;
+        }
+    });
+
+    const esc = globalShortcut.register('Esc', () => {
+        if(showOrHide) {
+            mainWindow.hide();
+            showOrHide = false;
+        }
+    });
 });
 
 // In this file you can include the rest of your app's specific main process

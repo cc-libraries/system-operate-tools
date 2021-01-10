@@ -1,10 +1,45 @@
 $margin-base: 10px;
+$line-height: 22px;
 $background-gray: gray;
+$background-white: #fff;
+$content-height: 480px;
 
 .main-windows {
     margin: $margin-base;
 }
 
+.main-windows::-webkit-scrollbar {
+    display: none;
+}
+
 .selected-item {
     background-color: $background-gray;
+}
+
+.content-item {
+    height: $line-height;
+    overflow: hidden;
+}
+
+.theme-light {
+    background-color: $background-white;
+}
+
+.header-content {
+    padding: 0px 0px $margin-base 0px;
+    height: auto;
+    line-height: normal;
+}
+
+.clipboard-list {
+    height: $content-height;
+    overflow-y: scroll;
+}
+
+.content-area {
+    margin-left: $margin-base;
+}
+
+.clipboard-list::-webkit-scrollbar {
+    display: none;
 }

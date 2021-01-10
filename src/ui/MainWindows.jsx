@@ -1,5 +1,5 @@
 import React from 'react';
-import { Input, List } from 'antd';  //FIXED: https://github.com/ant-design/ant-design/issues/4618#issuecomment-309258697
+import { Input, List, Layout } from 'antd';  //FIXED: https://github.com/ant-design/ant-design/issues/4618#issuecomment-309258697
 import 'antd/dist/antd.css';
 import { readText, writeText } from '../util/clipboard/Clipboard';
 import { DataBase } from '../util/DataBase';
@@ -12,7 +12,8 @@ class MainWindows extends React.Component {
         this.setProps = new Set();
         this.state = {
             focusIndex: -1,
-            cbTextArray: []
+            cbTextArray: [],
+            selectedContent: ''
         };
         this.database = new DataBase('./clipboard.db');
         this.searchInput = React.createRef();
@@ -38,30 +39,43 @@ class MainWindows extends React.Component {
     }
 
     render() {
+        const { Header, Sider, Content } = Layout;
         return (
             //TODO: Vlist from react-virtualized is better to handle massive data, for more info: https://ant.design/components/list
-            <div class="main-windows">
-                <Input
-                    placeholder="search"
-                    ref={this.searchInput}
-                    onChange={e =>  this.searchClip(e.target.value)}
-                    onKeyDown={this.inputKeyDown.bind(this)}
-                />
-                <List
-                    itemLayout="horizontal"
-                    dataSource={this.state.cbTextArray}
-                    renderItem={(item, index) => (
-                        <List.Item
-                            className={this.state.focusIndex == index ? 'selected-item' : ''}
-                            actions={[<a href="#" onClick={() => this.deleteClipItem(item.id)}>delete</a>]}
-                        >
-                            <List.Item.Meta
-                                title={item.content}
-                            />
-                        </List.Item>
-                    )}
-                />
-            </div>
+            <Layout class="main-windows">
+                <Header className="theme-light header-content">
+                    <Input
+                        id="search-input"
+                        autofocus
+                        placeholder="search"
+                        ref={this.searchInput}
+                        onChange={e =>  this.searchClip(e.target.value)}
+                        onKeyDown={this.inputKeyDown.bind(this)}
+                    />
+                </Header>
+                <Layout>
+                    <Sider className="theme-light clipboard-list" id="cb-list">
+                        <List
+                            itemLayout="horizontal"
+                            dataSource={this.state.cbTextArray}
+                            renderItem={(item, index) => (
+                                <List.Item
+                                    className={this.state.focusIndex == index ? 'selected-item' : ''}
+                                    actions={[<a href="#" onClick={() => this.deleteClipItem(item.id)}>delete</a>]}
+                                >
+                                    <List.Item.Meta
+                                        className="content-item"
+                                        title={item.content}
+                                    />
+                                </List.Item>
+                            )}
+                        />
+                    </Sider>
+                    <Content className="content-area">
+                        {this.state.selectedContent}
+                    </Content>
+                </Layout>
+            </Layout>
         );
     }
 
@@ -80,8 +94,11 @@ class MainWindows extends React.Component {
         }
 
         this.setState({
-            focusIndex: focusIndex
+            focusIndex: focusIndex,
+            selectedContent: -1 == focusIndex ? '' : this.state.cbTextArray[focusIndex].content
         });
+
+        document.getElementById('cb-list').scrollTop = 46 * focusIndex;
     }
 
     async componentDidMount () {
@@ -123,6 +140,9 @@ class MainWindows extends React.Component {
     async searchClip (searchIput) {
         let items = await this.database.filter(searchIput);
         this.reRenderList(items);
+        this.setState({
+            focusIndex: -1
+        })
     }
 
     deleteClipItem (id) {
