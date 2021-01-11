@@ -120,12 +120,12 @@ class MainWindows extends React.Component {
 
         let array = this.state.cbTextArray;
         if(this.setProps.has(cbContext.id)) {
-            // console.log('listenCBEvent update context id: ' + cbContext.id + ' time: ' + cbContext.time + ' content: ' + cbContext.content);
+            // console.log('listenCBEvent update context id: ' + cbContext.id + ' time: ' + cbContext.time + ' type: ' + cbContext.type + ' content: ' + cbContext.content);
             this.database.update(cbContext);
             this.setProps.delete(cbContext.id);
             array = array.filter(element => element.id != cbContext.id);
         } else {
-            // console.log('listenCBEvent insert context id: ' + cbContext.id + ' time: ' + cbContext.time + ' content: ' + cbContext.content);
+            // console.log('listenCBEvent insert context id: ' + cbContext.id + ' time: ' + cbContext.time + ' type: ' + cbContext.type + ' content: ' + cbContext.content);
             this.database.insert(cbContext);
         }
 
