@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
 
 const commonConfig = {
-  watch: true,
+  // watch: true,
   watchOptions: {
     ignored: /node_modules/
   },
@@ -19,7 +19,7 @@ const commonConfig = {
     path: path.resolve(__dirname, 'dist'),
     publicPath: '/dist/'
   },
-  devtool: 'inline-source-map',
+  // devtool: 'inline-source-map',
   node: {
     __dirname: false
   },
