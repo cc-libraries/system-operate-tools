@@ -4,6 +4,7 @@ export function readText() {
     let result = {};
     result.content = clipboard.readText();
     result.time = +new Date();
+    result.type = 0;
     result.id = hashCode(result.content);
     return result;
 }

@@ -20,6 +20,7 @@ var DataBase = /** @class */ (function () {
                 let createTable = `CREATE TABLE IF NOT EXISTS clipboard (
                     id INTEGER PRIMARY KEY,
                     time INTEGER,
+                    type INTEGER,
                     content TEXT)`;
                 this.database.run(createTable, (error) => {
                     if(error) {
@@ -52,8 +53,8 @@ var DataBase = /** @class */ (function () {
 
     DataBase.prototype.insert = function (item) {
         // this.database.serialize(() => {
-            let insertString = `INSERT INTO clipboard (id, time, content) VALUES (?, ?, ?)`;
-            this.database.run(insertString, [item.id, item.time, item.content]);
+            let insertString = `INSERT INTO clipboard (id, time, type, content) VALUES (?, ?, ?, ?)`;
+            this.database.run(insertString, [item.id, item.time, item.type, item.content]);
         // });
     }
 
@@ -61,15 +62,15 @@ var DataBase = /** @class */ (function () {
         let insertString = `INSERT INTO clipboard VALUES(?)`;
         var statement = this.database.prepare(insertString, callback);
         items.each((item) => {
-            statement.run(item.id + ',' + item.time + ',' + item.content);
+            statement.run(item.id + ',' + item.time + ',' + item.type + ',' + item.content);
         }, callback);
         statement.finalize(callback);
     };
 
     DataBase.prototype.update = function (item) {
         // this.database.serialize(() => {
-        let updateString = 'UPDATE clipboard SET time = ?, content = ? WHERE id = ?';
-        this.database.run(updateString, [item.time, item.content, item.id]);
+        let updateString = 'UPDATE clipboard SET time = ?, type = ?, content = ? WHERE id = ?';
+        this.database.run(updateString, [item.time, item.type, item.content, item.id]);
         // });
     }
 
@@ -91,7 +92,7 @@ var DataBase = /** @class */ (function () {
         let updateString = `UPDATE clipboard SET ?`;
         var statement = this.database.prepare(updateString, callback);
         items.each((item) => {
-            statement.run('time = ' + item.time + ', content = ' + item.content + ' WHERE id = ' + item.id, callback);
+            statement.run('time = ' + item.time + ', type = ' + item.type + ', content = ' + item.content + ' WHERE id = ' + item.id, callback);
         }, callback);
         statement.finalize(callback);
     }
