@@ -4,6 +4,8 @@ import 'antd/dist/antd.css';
 import { readText, writeText } from '../util/clipboard/Clipboard';
 import { DataBase } from '../util/DataBase';
 import '../scss/common.scss';
+const path = require('path')
+const dbPath = path.resolve(__dirname, 'clipboard.db')
 
 class MainWindows extends React.Component {
     constructor(props) {
@@ -15,7 +17,7 @@ class MainWindows extends React.Component {
             cbTextArray: [],
             selectedContent: ''
         };
-        this.database = new DataBase('./clipboard.db');
+        this.database = new DataBase(dbPath);
         this.searchInput = React.createRef();
     }
 

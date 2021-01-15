@@ -1,6 +1,7 @@
 // Modules to control application life and create native browser window
 const { app, BrowserWindow, Menu, Tray, globalShortcut, nativeImage } = require('electron');
 const path = require('path');
+const dbPath = path.resolve(__dirname, 'clipboard.db')
 
 let mime = require('mime-types');
 
@@ -31,7 +32,7 @@ function createWindow() {
 
     // let trayIcon = __dirname + '/icon.ico';
     // appTray = new Tray();
-    let trayIcon = path.join(__dirname, '/icon.ico');
+    let trayIcon = path.join(__dirname, 'icon.ico');
     appTray = new Tray(nativeImage.createFromPath(trayIcon));
 
     const contextMenu = Menu.buildFromTemplate([
@@ -46,7 +47,7 @@ function createWindow() {
     appTray.setContextMenu(contextMenu);
 
     // and load the index.html of the app.
-    let htmlFile = __dirname + '/index.html';
+    let htmlFile = path.join(__dirname, 'index.html');
     mainWindow.loadFile(htmlFile);
     // mainWindow.loadURL('http://localhost:3000');
 

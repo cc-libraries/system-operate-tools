@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 // const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const webpack = require('webpack');
 
@@ -82,7 +83,11 @@ module.exports = [
           template: "./public/index.html",
           filename: "index.html",
           inject: false //FIXED: https://github.com/petehunt/webpack-howto/issues/46#issuecomment-164285430
-        })
+        }),
+        new CopyWebpackPlugin({
+          patterns: [
+            { from: "src/resources/icon/icon.ico", to: "" }
+          ]})
       ]
     },
     commonConfig
