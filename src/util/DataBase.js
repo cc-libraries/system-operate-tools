@@ -32,7 +32,7 @@ var DataBase = /** @class */ (function () {
                 });
 
                 // this.database.all("SELECT * FROM clipboard ORDER BY time desc",[], callback);
-                this.database.all("SELECT * FROM clipboard ORDER BY time desc",[], (error, result) => {
+                this.database.all("SELECT * FROM clipboard ORDER BY time desc LIMIT 100",[], (error, result) => {
                     console.log('Database init: ');
                     if(error) {
                         console.log('select all error: ' + error);
@@ -76,7 +76,7 @@ var DataBase = /** @class */ (function () {
 
     DataBase.prototype.getAll = function() {
         return new Promise((resolve, reject) => {
-            this.database.all("SELECT * FROM clipboard ORDER BY time desc", (error, result) => {  //TODO: limit 20
+            this.database.all("SELECT * FROM clipboard ORDER BY time desc LIMIT 100", (error, result) => {  //TODO: limit 20
                 console.log('Database getAll: ');
                 if(error) {
                     console.log('select all error: ' + error);
@@ -98,7 +98,7 @@ var DataBase = /** @class */ (function () {
     }
 
     DataBase.prototype.filter = function (content) {
-        let filterString = `SELECT * FROM clipboard WHERE content LIKE '%` + content + `%' ORDER BY time desc`;
+        let filterString = `SELECT * FROM clipboard WHERE content LIKE '%` + content + `%' ORDER BY time desc LIMIT 100`;
         return new Promise((resolve, reject) => {
             this.database.all(filterString, (error, result) => {
                 if(error) {

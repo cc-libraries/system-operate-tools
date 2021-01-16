@@ -26,8 +26,8 @@ function createWindow() {
             nodeIntegration: true,
             contextIsolation: false
         },
-        alwaysOnTop: true
-        // frame: false
+        alwaysOnTop: true,
+        frame: false
     });
 
     // let trayIcon = __dirname + '/icon.ico';
