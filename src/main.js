@@ -1,7 +1,6 @@
 // Modules to control application life and create native browser window
 const { app, BrowserWindow, Menu, Tray, globalShortcut, nativeImage } = require('electron');
 const path = require('path');
-const dbPath = path.resolve(__dirname, 'clipboard.db')
 
 let mime = require('mime-types');
 
@@ -95,12 +94,12 @@ app.whenReady().then(() => {
         }
     });
 
-    const esc = globalShortcut.register('Esc', () => {
-        if(showOrHide) {
-            mainWindow.hide();
-            showOrHide = false;
-        }
-    });
+    // const esc = globalShortcut.register('Esc', () => {
+    //     if(showOrHide) {
+    //         mainWindow.hide();
+    //         showOrHide = false;
+    //     }
+    // });
 });
 
 // In this file you can include the rest of your app's specific main process
