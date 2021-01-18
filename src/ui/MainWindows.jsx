@@ -114,8 +114,8 @@ class MainWindows extends React.Component {
 
     async listenCBEvent() {
         let cbContext = readText();
-        if(cbContext.content == this.lastCBText) {
-            console.log('listenCBEvent same to the latest!');
+        if(cbContext.content == this.lastCBText || cbContext.content === '') {
+            console.log('listenCBEvent same to the latest and not empty!');
             return;
         }
         this.lastCBText = cbContext.content;
